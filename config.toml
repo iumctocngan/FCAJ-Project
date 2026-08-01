@@ -1,5 +1,5 @@
 baseURL = "https://iumctocngan.github.io/FCAJ-Project/"
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 

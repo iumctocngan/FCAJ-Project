@@ -12,7 +12,7 @@ You can create a policy that restricts access to specific S3 buckets only. This 
 
 In this section you will create a VPC endpoint policy that restricts access to the S3 bucket specified in the VPC endpoint policy.
 
-![endpoint diagram](/images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
+![endpoint diagram](images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
 
 #### Connect to an EC2 instance and verify connectivity to S3
 
@@ -21,21 +21,21 @@ In this section you will create a VPC endpoint policy that restricts access to t
 ```
 aws s3 ls s3://\<your-bucket-name\>
 ```
-![test](/images/5-Workshop/5.5-Policy/test1.png)
+![test](images/5-Workshop/5.5-Policy/test1.png)
 
 The bucket contents include the two 1 GB files uploaded in earlier.
 
 2. Create a new S3 bucket; follow the naming pattern you used in Part 1, but add a '-2' to the name. Leave other fields as default and click create
 
-![create bucket](/images/5-Workshop/5.5-Policy/create-bucket.png)
+![create bucket](images/5-Workshop/5.5-Policy/create-bucket.png)
 
 Successfully create bucket
 
-![Success](/images/5-Workshop/5.5-Policy/create-bucket-success.png)
+![Success](images/5-Workshop/5.5-Policy/create-bucket-success.png)
 
 3. Navigate to: Services > VPC > Endpoints, then select the Gateway VPC endpoint you created earlier. Click the Policy tab. Click Edit policy.
 
-![policy](/images/5-Workshop/5.5-Policy/policy1.png)
+![policy](images/5-Workshop/5.5-Policy/policy1.png)
 
 The default policy allows access to all S3 Buckets through the VPC endpoint.
 
@@ -60,7 +60,7 @@ The default policy allows access to all S3 Buckets through the VPC endpoint.
 }
 ```
 
-![custom policy](/images/5-Workshop/5.5-Policy/policy2.png)
+![custom policy](images/5-Workshop/5.5-Policy/policy2.png)
 
 Successfully customize policy
 
