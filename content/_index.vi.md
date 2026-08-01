@@ -17,7 +17,7 @@ chapter: false
 
 &emsp; **Ngành:** Khoa học máy tính
 
-&emsp; **Lớp:** 68CS1
+&emsp; **Lớp:** 68CNCS
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 

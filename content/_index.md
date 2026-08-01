@@ -20,7 +20,7 @@ chapter: false
 
 &emsp; **Major:** Computer Science
 
-&emsp; **Class:** 68CS1
+&emsp; **Class:** 68CNCS
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
