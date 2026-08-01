@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 13/07/2026 đến ngày 13/09/2026
 
-<img src="images/avatar.png" width="350" alt="Ảnh đại diện" />
+<img src="/FCAJ-Project/images/avatar.png" width="350" alt="Ảnh đại diện" />
 
 
 
