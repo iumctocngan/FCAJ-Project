@@ -1,112 +1,97 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-08-03
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# AI NutriVision
+## Automated Food Recognition and Nutrition Analysis System on AWS Serverless Infrastructure
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The **AI NutriVision** project addresses daily dietary tracking challenges by automating food recognition and calorie estimation along with macronutrient metrics (Protein, Carbs, Fat, Fiber) directly from meal photos.
+
+The model is trained on the benchmark **Food-101** dataset (comprising 101,000 images across 101 food categories). To optimize for real-world nutrition tracking, the project performed data cleaning to curate a high-density subset of the **50 most popular food categories** (totaling 50,000 images). The fine-tuned EfficientNet-B0 deep learning model achieves a **Test Top-1 Accuracy of 85.62%** (Weighted Average F1-score of 0.86) across 5,000 independent test images.
+
+The model is compressed into static ONNX format (15.5 MB) and operates entirely on AWS Serverless architecture (API Gateway, Lambda, S3, DynamoDB, Rekognition, CloudWatch). This solution reduces nutrition logging time from 5 minutes down to under 3 seconds per meal, with a warm Lambda execution duration of **35–50 ms** (total end-to-end web response latency < 150 ms) and superior cost optimization compared to traditional servers.
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+#### Real-world Challenge
+Calculating daily calories and macronutrient intake (Protein, Carbs, Fat) currently relies heavily on manual logging applications (such as MyFitnessPal, Yazio). Users must manually type food names, estimate portion weights, and search database entries. This multi-step process is tedious and frequently leads to user abandonment within days.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### Proposed Solution
+**AI NutriVision** provides a web interface where users simply capture or upload a meal image. The image is routed via API Gateway to AWS Lambda, where the ONNX model identifies the food dish with a warm compute duration of 35–50ms and returns a detailed nutritional breakdown.
+- **Flexible Fallback AI Mechanism**: To handle out-of-distribution (OOD) dishes outside the 50 trained classes, the system automatically integrates **Amazon Rekognition** whenever the primary model confidence falls below 60%. Rekognition returns general labels (e.g., "Dish", "Noodle", "Soup"), which Lambda fuzzy-matches against `calorie_map.json` or assigns default macro estimates (`general_food`), while logging the image to `s3://.../ood_logs/` for future retraining.
+- **Dynamic Portion Scaling**: The system allows users to select portion size multipliers directly on the Web UI (Small 0.7x, Medium 1.0x, Large 1.5x, Special 2.0x), enabling Lambda to automatically scale calories and macros based on actual consumption.
+- Recognition history and nutrition metrics are automatically persisted into **Amazon DynamoDB** to build a personal food diary.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+#### Benefits and Return on Investment (ROI)
+- **Time Optimization**: Reduces daily logging time by 90% for gym-goers, dieters, or patients tracking nutrition with a single photo capture.
+- **Cost Efficiency**: Serverless architecture incurs costs strictly per actual request without 24/7 server maintenance fees, maximizing operational budget optimization.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+![AI NutriVision Architecture Diagram](/FCAJ-Project/images/2-Proposal/architecture.png)
 
-![IoT Weather Station Architecture](/FCAJ-Project/images/2-Proposal/edge_architecture.jpeg)
+#### AWS Services Used:
+1. **Amazon API Gateway**: Receives HTTPS `POST /predict` requests from the Web UI, authenticates API Keys, manages CORS configurations, protects against DDoS, and enforces Rate Limiting (20 req/s).
+2. **AWS Lambda**: Serverless compute function running Python 3.11, responsible for Base64 image decoding, blur/dark quality checks, running ONNX Runtime inference, and scaling calories by user-selected portion size (0.7x – 2.0x).
+3. **Amazon S3**: Central storage for `food_model.onnx` (15.5 MB), nutritional lookup database `calorie_map.json`, and out-of-distribution image logs (`ood_logs/`). Uses S3 Lifecycle Policy to automatically expire logs after 90 days.
+4. **Amazon Rekognition**: Managed AI service serving as a Fallback Engine. When the primary ONNX model confidence is < 60%, Lambda triggers Rekognition for general label detection, avoiding system deadlocks.
+5. **Amazon DynamoDB**: Serverless NoSQL database storing prediction records (`prediction_id`, `timestamp`, `food_class`, `confidence`, `calories`, `macronutrients`).
+6. **Amazon CloudWatch**: Monitors Lambda performance, API latency (P95 Latency), error rates, and triggers alarms during unexpected failures.
 
-![IoT Weather Platform Architecture](/FCAJ-Project/images/2-Proposal/platform_architecture.jpeg)
+### 4. Technical Implementation & MLOps Optimization
+Project implementation was executed in 2 core phases:
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+#### Phase 1: Data Cleaning, AI Model Training & Compression (Google Colab GPU)
+- **Data Selection & Cleaning**: The raw Food-101 dataset contains 101,000 images with some label noise. The project conducted manual data cleaning combined with noise detection algorithms to select the 50 most popular food categories based on 3 scientific criteria:
+  1. *Consumption Frequency*: Prioritizing widely consumed dishes in Asian and Western diets (e.g., Pho, Fried Rice, Pizza, Sushi, Hamburger, Steak, Salads, etc.).
+  2. *Nutritional Complexity*: Selecting dishes with diverse macronutrient structures (Protein, Carbs, Fat) requiring strict caloric monitoring.
+  3. *Redundancy Elimination*: Filtering out niche regional dishes or items with low lookup demand in fitness tracking applications.
+  The resulting 50-class dataset (50,000 images) was partitioned into standard splits: 37,500 training images (750/class), 7,500 validation images (150/class), and 5,000 independent test images (100/class).
+- **Training & Evaluation**: Utilized an `EfficientNet-B0` backbone with a 2-stage fine-tuning workflow (Phase 1: Freeze Backbone for 3 epochs; Phase 2: Full Unfreeze with Cosine Annealing scheduler for 7 epochs). Results achieved **Test Top-1 Accuracy of 85.62%** and a Weighted Average F1-score of 0.86.
+- **Model Compression & INT8 Roadmap**: Converted the PyTorch checkpoint (`.pth`) into static `food_model.onnx` (15.5 MB) format. Future work includes INT8 quantization to compress the model to **~1.8 MB**, reducing latency by an additional 40%.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+#### Phase 2: Cloud Infrastructure Deployment & CI/CD (AWS CloudFormation / SAM)
+- Packaged Lambda source code with required dependencies (`onnxruntime`, `Pillow`, `boto3`).
+- Developed IaC template `infrastructure/template.yaml` (AWS SAM / CloudFormation) integrating automated CI/CD pipelines to test and deploy with a single CLI command.
+- **Periodic Retraining Strategy**: Out-of-distribution images collected in `s3://.../ood_logs/` will be evaluated monthly. Upon reaching 1,000 new images, the system automatically triggers retraining pipelines to expand coverage to 100+ food classes.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+### 5. Security & Privacy
+- **Authentication & Authorization**: REST API access restricted via API Keys / Cognito User Pools. IAM Least-Privilege Roles applied to Lambda (granting read access only to the specified S3 bucket and write access to the DynamoDB table).
+- **Data Encryption**: Server-Side Encryption (SSE-S3) enabled on Amazon S3 and DynamoDB data encryption at-rest.
+- **Data Retention Management**: Configured S3 Lifecycle Rules to automatically delete `ood_logs/` images after 90 days to protect user privacy and optimize storage costs.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+### 6. Timeline & Milestones
+- **Weeks 1–2**: Food-101 dataset analysis, label cleaning, 50-class selection, Draw.io architecture design, and cost estimation.
+- **Weeks 3–4**: AI model fine-tuning on Colab GPU (achieving Test Top-1 Acc 85.62% and F1-Score 0.86), ONNX export, and local edge-case testing.
+- **Weeks 5–6**: CloudFormation/SAM template writing, resource deployment to region `ap-southeast-1` (Singapore), and Web UI integration with API Gateway.
+- **Weeks 7–8**: CloudWatch performance evaluation (Cold Start vs Warm Start analysis), step-by-step Workshop documentation writing, and resource cleanup verification (`cleanup.sh`).
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+### 7. Budget Estimation & Cost Management
+Cost calculations are derived from the official AWS Pricing Calculator for an operational scale of **100,000 requests/month** (~3,300 requests/day - realistic production scale):
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+| AWS Service | Monthly Workload | List Price Cost |
+|---|---|---|
+| **Amazon API Gateway** | 100,000 REST API calls ($3.50 / 1M) | $0.35 USD |
+| **AWS Lambda** | 100,000 invocations (512MB RAM, 50ms/req) | $0.04 USD |
+| **Amazon S3** | 5.0 GB storage + 10,000 PUT/GET requests | $0.15 USD |
+| **Amazon DynamoDB** | 100,000 Write Units (WCU) + 2 GB data storage | $1.50 USD |
+| **Amazon Rekognition** | ~10,000 Fallback AI calls (10% of requests) | $10.00 USD |
+| **Amazon CloudWatch** | 5 GB Log Storage + 2 CloudWatch Alarms | $2.50 USD |
+| **TOTAL MONTHLY COST** | **100,000 requests/month scale** | **~ $14.54 USD / month** |
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+> [!TIP] Superior Cost Optimization & Rekognition Risk Management:
+> - **Serverless Advantage**: Compared to maintaining a 24/7 GPU EC2 server ($150–$300/month), Serverless saves >90% in operational costs.
+> - **Rekognition Cost Mitigation (~69% of budget)**: To prevent Rekognition costs from rising if fallback traffic exceeds 10%, the system implements DynamoDB image hash caching for fallback results and dynamic Confidence Threshold tuning post-go-live.
 
-Total: $0.7/month, $8.40/12 months
+### 8. Risk Assessment & Mitigation
+- **Out-of-Distribution (OOD) Dish Risk**: Unseen food dishes outside the 50 classes ➔ *Mitigation*: If confidence < 60%, automatically trigger Amazon Rekognition label detection, fuzzy-match labels with `calorie_map.json` or assign a default nutritional group, while logging the image to `s3://.../ood_logs/`.
+- **Lambda Cold Start Risk**: Initial call after container idle suffers ~350–500ms latency ➔ *Mitigation*: Maintaining an ultra-lightweight ONNX model (15.5 MB) keeps cold start minimal. For production environments requiring consistent SLA < 150ms, AWS Lambda Provisioned Concurrency can be enabled.
+- **Image Quality Risk**: Uploaded photos are blurry, dark, or corrupted ➔ *Mitigation*: Image quality check function on Lambda intercepts low-quality images immediately, returning HTTP 400/422 with guidance for re-shooting.
+- **Cost Overage Risk**: Traffic spam or denial of service ➔ *Mitigation*: Configure API Gateway throttling (limit 20 req/s) and set up CloudWatch Budget Alarms sending email alerts if monthly costs exceed threshold limits.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
-
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
-
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
-
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
-
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+### 9. Expected Outcomes
+1. **Technical Excellence**: Successfully built an end-to-end Serverless AI Computer Vision system with ultra-low warm Lambda compute latency (35–50ms), total web response latency < 150ms, auto-scaling capabilities, and 100% edge-case handling. Accurately classifies the 50 most popular food categories with a **Test Top-1 Accuracy of 85.62%** (Weighted Average F1-score of 0.86).
+2. **Practical Value**: Delivers an automated nutrition tracking solution for users while providing a standardized AWS lab template for the FCAJ community on deploying Serverless AI/ML workloads.

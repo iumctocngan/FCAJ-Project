@@ -6,51 +6,26 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-
 ### Mục tiêu tuần 3:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu dịch vụ Amazon EC2 và các phương thức kết nối an toàn.
+* Quản lý lưu trữ khối với Amazon EBS, cấu hình Elastic IP và khởi tạo Custom AMI.
+* Ôn tập, tổng hợp và củng cố toàn bộ kiến thức đã học trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan Amazon EC2:<br>&emsp; + Instance Types<br>&emsp; + AMI<br>&emsp; + Key Pair | 27/07/2026 | 27/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Thực hành khởi tạo EC2 Instance trong VPC tùy chỉnh<br>- Kết nối EC2 qua SSH và EC2 Instance Connect | 28/07/2026 | 28/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tìm hiểu và quản lý Amazon EBS (Elastic Block Store):<br>&emsp; + Tạo & gắn (Attach) EBS Volume vào EC2<br>&emsp; + Định dạng và mount ổ đĩa<br>&emsp; + Tạo EBS Snapshot | 29/07/2026 | 30/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Gán Elastic IP cho EC2 Instance để duy trì IP tĩnh<br>- Tạo Custom AMI từ EC2 Instance đã cấu hình | 31/07/2026 | 01/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Ôn tập và tổng hợp lại toàn bộ kiến thức, bài thực hành đã triển khai trong tuần | 02/07/2026 | 02/08/2026 | |
 
 ### Kết quả đạt được tuần 3:
+* Thành thạo thao tác khởi tạo, cấu hình và kết nối an toàn tới máy chủ ảo Amazon EC2.
+* Làm chủ việc quản lý bộ nhớ đĩa cứng với EBS Volume, thực hiện sao lưu dữ liệu bằng EBS Snapshot.
+* Cấu hình thành công Elastic IP và đóng gói Custom AMI cho việc tái sử dụng hạ tầng.
+* Củng cố và hệ thống hóa toàn bộ kiến thức đã học về EC2, EBS, Elastic IP và AMI trong tuần.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
 
 
