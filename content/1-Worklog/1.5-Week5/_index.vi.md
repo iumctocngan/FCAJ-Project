@@ -6,51 +6,22 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-
 ### Mục tiêu tuần 5:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu kiến trúc Serverless trên AWS (AWS Lambda, Amazon API Gateway).
+- Nghiên cứu tích hợp API Gateway với AWS Lambda và đóng gói Docker Container Image cho mô hình Machine Learning.
+- Ôn tập, tổng hợp và củng cố toàn bộ kiến thức đã học trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan về kiến trúc Serverless và dịch vụ AWS Lambda | 10/08/2026 | 10/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu dịch vụ Amazon API Gateway (REST API, HTTP API, CORS, Integration) | 11/08/2026 | 11/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Thực hành tích hợp API Gateway với AWS Lambda Function | 12/08/2026 | 12/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Nghiên cứu triển khai mô hình Machine Learning trên Lambda Container Image | 13/08/2026 | 13/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Ôn tập và tổng hợp lại toàn bộ kiến thức, bài thực hành đã triển khai trong tuần | 14/08/2026 | 14/08/2026 | |
 
 ### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm vững nguyên lý hoạt động của kiến trúc Serverless, ưu điểm và ứng dụng thực tế.
+- Hiểu cách cấu hình và điều hướng API qua Amazon API Gateway đến hàm backend AWS Lambda.
+- Khảo sát và chuẩn bị môi trường đóng gói Docker Container cho mô hình Machine Learning.
+- Củng cố và hệ thống hóa toàn bộ kiến thức đã học trong tuần.

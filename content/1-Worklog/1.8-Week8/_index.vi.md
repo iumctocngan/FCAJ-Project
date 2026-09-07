@@ -6,51 +6,23 @@ chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-
 ### Mục tiêu tuần 8:
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu và cài đặt công cụ dòng lệnh AWS Command Line Interface (AWS CLI).
+* Thực hành quản trị các dịch vụ cốt lõi (IAM, Amazon S3, Amazon SNS) bằng câu lệnh AWS CLI.
+* Ôn tập và củng cố kỹ năng quản trị hạ tầng qua giao diện dòng lệnh.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Cài đặt, cấu hình AWS CLI (Access Key, Secret Key, Region mặc định) | 31/08/2026 | 31/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Quản lý tài nguyên IAM bằng AWS CLI (Tạo User, Group, Attach Policy) | 03/09/2026 | 03/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Thao tác với Amazon S3 qua AWS CLI (Tạo Bucket, Upload/Download, Sync dữ liệu) | 04/09/2026 | 04/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Cấu hình Amazon SNS qua AWS CLI (Tạo Topic, Subscribe Email/SMS, Publish thông báo) | 05/09/2026 | 05/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Ôn tập và tổng hợp lại các câu lệnh AWS CLI đã thực hành trong tuần | 06/09/2026 | 06/09/2026 | |
 
 ### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Cài đặt và cấu hình thành thạo AWS CLI để tương tác với tài khoản AWS.
+* Quản trị người dùng, nhóm và phân quyền IAM hoàn toàn qua câu lệnh CLI.
+* Thành thạo các lệnh quản lý lưu trữ trên Amazon S3 (mb, cp, sync, rm).
+* Tạo Topic và gửi thông báo qua Amazon SNS bằng dòng lệnh thành công.
 

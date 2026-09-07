@@ -1,28 +1,28 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-08-04
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# NutriVision: Automated Food Recognition and Nutrition Analysis System on AWS Serverless Infrastructure
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+This hands-on workshop guides you step-by-step through deploying an End-to-End Computer Vision / Machine Learning model from a Google Colab research environment onto an AWS Serverless Production cloud architecture.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+The NutriVision system automates calorie and macronutrient estimation (Protein, Carbs, Fat, Fiber) directly from meal photos with rapid response times, cost-optimized Serverless architecture, an Amazon Rekognition Fallback Engine, and real-time observability using Amazon CloudWatch & SNS.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+* **Project Source Code**: [iumctocngan/NutriVision](https://github.com/iumctocngan/NutriVision)
 
-#### Content
+---
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+#### Workshop Content
+
+1. [Workshop Overview](5.1-Workshop-overview/)
+2. [Prerequisites](5.2-Prerequisite/)
+3. [AI Model Training & Compression](5.3-Model-Training/)
+4. [AWS Serverless Deployment](5.4-Serverless-Deployment/)
+5. [CloudWatch Monitoring & SNS Alerts](5.5-Monitoring-Alerts/)
+6. [Resource Cleanup](5.6-Cleanup/)

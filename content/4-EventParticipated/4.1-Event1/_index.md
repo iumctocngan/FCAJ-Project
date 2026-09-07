@@ -6,118 +6,105 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Summary Report: “AWS Vietnam Community Meetup”
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### Event Overview
+
+1. **Event Name:** AWS Vietnam Community Meetup
+2. **Date & Time:** Saturday, July 25 | 08:30 – 12:00
+3. **Location:** Grand Terra Building - Office Saigon, O Cho Dua, Hanoi
+4. **Target Audience:** Cloud Engineers, Software Engineers, AI/ML Practitioners, Students, and AWS Cloud enthusiasts in Vietnam.
+
+---
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+1. Connect the Cloud & AI community in Vietnam, sharing the journey and future roadmap of AWS User Group.
+2. Update attendees on the rise and practical implementation of **Open-Source AI Agents**.
+3. Provide strategies for transitioning from **AI Trends** to **Real-world Business Value** and measuring ROI.
+4. Accelerate development and release cycles with the mindset of **“Ship Fast with AI”**.
+5. Guide attendees on selecting and deploying effective **AI Agent Patterns** on **AWS**.
 
-### Speakers
+---
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+### Speakers & Topics
 
-### Key Highlights
+| Speaker | Role / Organization | Topic |
+| :--- | :--- | :--- |
+| **Anh Ho & Phong Pham** | AWS Community Leaders | *Community Introduction & Activities Overview* |
+| **Tuan Vu** | AI/Cloud Specialist | *OpenClaw – The Rise and Practice of Open-Source AI Agents* |
+| **Nguyen Thu & Nam La** | Tech & Business Consultants | *From AI Trends to Business Value* |
+| **Henry (Duc) Bui** | Engineering Leader / Tech Expert | *Ship Fast with AI, Not by* |
+| **Dzung Luong** | Cloud Solutions Architect | *Selecting the Right AI Agent Pattern on AWS* |
 
-#### Identifying the drawbacks of legacy application architecture
+---
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+### Key Highlights & Session Details
 
-#### Transitioning to modern application architecture – Microservices
+#### 1. AWS Community in Vietnam (Speakers: Anh Ho & Phong Pham)
+1. Shared the journey and mission of the AWS User Group Vietnam.
+2. Highlighted key regular programs: Technical Meetups, Hands-on Workshops, Bootcamps, and AWS Certification support programs.
+3. Emphasized building an inclusive, open community where tech enthusiasts can share practical experiences and expand their professional network.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### 2. OpenClaw – The Rise and Practice of Open-Source AI Agents (Speaker: Tuan Vu)
+1. **The Rise of Autonomous AI Agents**: Shift from passive conversational LLMs (chatbots) to autonomous agents capable of multi-step planning, tool calling, and executing complex workflows.
+2. **Hands-on with OpenClaw**: Architecture of the open-source agent framework for modular and flexible execution; memory management, reasoning loops (ReAct pattern), and secure integration with external APIs; along with practical tips for optimizing token costs and mitigating hallucinations in production.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### 3. From AI Trends to Business Value (Speakers: Nguyen Thu & Nam La)
+1. **Moving beyond the AI Hype**: Differentiating between merely experimenting with AI features versus solving core business challenges.
+2. **ROI & Feasibility Framework**: Use case selection criteria based on revenue impact, automation feasibility, and data readiness; with value measured through lowering operational costs, boosting employee productivity, and enhancing customer experience (CX).
+3. **Data Governance & Security**: Best practices for enterprise data governance, intellectual property protection, and security compliance when adopting GenAI.
 
-#### Domain-Driven Design (DDD)
+#### 4. Ship Fast with AI, Not by (Speaker: Henry (Duc) Bui)
+1. **Mindset of "Ship Fast with AI"**: Leveraging AI assistants (such as Amazon Q Developer, Copilots, Coding Agents) as a force multiplier across the Software Development Life Cycle (SDLC) from design, coding, testing to deployment.
+2. **Avoiding passive dependency ("Not by")**: Engineers must remain in control of architecture, code quality, and business logic rather than blindly trusting AI outputs.
+3. **Best practices**: Using AI for automated unit testing, legacy code refactoring, vulnerability scanning, and rapid technical documentation.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### 5. Selecting the Right AI Agent Pattern on AWS (Speaker: Dzung Luong)
+1. **Common AI Agent Architectural Patterns**: Router Pattern (intent classification and request routing), ReAct (iterative thought and tool execution loops), Sequential Pattern (linear step-by-step pipelines), and Hierarchical Pattern (supervisor-worker agent hierarchies).
+2. **AWS Service Ecosystem for AI Agents**: Amazon Bedrock (leveraging Bedrock Agents and Knowledge Bases for managed RAG), AWS Lambda & ECS/EKS (hosting custom tool execution environments and microservices), AWS Step Functions (orchestrating multi-step state machines with automated retries), and DynamoDB & OpenSearch (persistent context storage, session memory, and vector search).
+3. **Pattern Selection Criteria**: Balancing latency, implementation complexity, operational cost, and reasoning accuracy.
 
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+---
 
 ### Key Takeaways
 
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+#### Tech & Business Mindset
+1. **Business-Driven AI**: AI initiatives must deliver measurable business impact and ROI, not just technological novelty.
+2. **Developer Multiplier**: AI empowers developers to move faster and tackle higher-level problems when used with strong fundamentals.
 
 #### Technical Architecture
+1. Deepened understanding of **AI Agent design patterns** and how to map them to native **AWS services**.
+2. Recognized the synergy between **Bedrock Agents**, **Knowledge Bases**, and **Step Functions** for building scalable and reliable agentic systems.
+3. Gained insights into open-source agent orchestration and context engineering.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+---
 
-#### Modernization Strategy
+### Practical Application
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+1. **Integrate AI Coding Tools**: Adopt Amazon Q Developer and intelligent coding assistants to accelerate development and improve test coverage.
+2. **Build AI Agent Prototypes**: Experiment with building agent workflows using Amazon Bedrock Agents and open-source tooling for automated tasks.
+3. **Community Engagement**: Actively participate in AWS Vietnam Community activities, workshops, and study groups.
 
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+---
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the **AWS Vietnam Community Meetup** was an engaging and enriching experience:
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+1. **High-Quality Technical Depth**: Sessions covered cutting-edge topics with practical, production-oriented insights from seasoned industry practitioners.
+2. **Vibrant Networking**: The tea break and networking sessions provided great opportunities to connect with cloud architects, developers, and industry peers.
+3. **Interactive Atmosphere**: The Kahoot quiz and lucky draw at the end made the event lively, engaging, and memorable.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### Event Photos
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+![Event Introduction & Speaker Lineup - AI Revolution & Open Claw](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_presentation.jpg)
+*Figure 1: MC introducing the event agenda and distinguished speakers*
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+![Event Hall and Attendees](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_attendees.jpg)
+*Figure 2: Packed hall and enthusiastic audience at Grand Terra Building*
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+![Group Photo with Speakers and AWS Vietnam Community](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_group_photo.jpg)
+*Figure 3: Group commemorative photo with speakers, organizers, and AWS Vietnam Community members*
 
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> **Summary:** The meetup provided valuable end-to-end insights from AI business strategy to hands-on AWS agent architecture, inspiring continuous learning and community contribution.

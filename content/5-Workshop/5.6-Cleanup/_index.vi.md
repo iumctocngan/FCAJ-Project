@@ -1,37 +1,61 @@
 ---
-title : "Dọn dẹp tài nguyên"
-date : 2024-01-01
-weight : 6
-chapter : false
-pre : " <b> 5.6. </b> "
+title: "Dọn dẹp tài nguyên"
+date: 2026-08-04
+weight: 6
+chapter: false
+pre: " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+#### Quy trình Dọn dẹp Tài nguyên AWS (Resource Cleanup)
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Để tránh phát sinh chi phí ngoài ý muốn sau khi hoàn thành bài thực hành, bạn hãy thực hiện xóa các tài nguyên đã khởi tạo trên AWS theo thứ tự các bước dưới đây:
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+---
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+#### 1. Xóa Amazon S3 Bucket:
+1. Mở [Amazon S3 Console](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1).
+2. Chọn Bucket fcaj-food-ai-storage-...
+3. Nhấp nút **Empty** ➔ Nhập `permanently delete` để xóa toàn bộ dữ liệu (bao gồm mô hình ONNX, bảng calo và thư mục ood_logs/).
+4. Nhấp nút **Delete** ➔ Nhập tên Bucket để xác nhận xóa hoàn toàn.
 
-![hosted zone](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+---
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+#### 2. Xóa Amazon ECR Repository:
+1. Mở [Amazon ECR Console](https://ap-southeast-1.console.aws.amazon.com/ecr/repositories?region=ap-southeast-1).
+2. Chọn Repository nutrivision-lambda.
+3. Nhấp nút **Delete** ➔ Nhập `delete` để xác nhận xóa toàn bộ Docker Image đã lưu trữ.
 
-![hosted zone](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/vpc.png)
+---
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+#### 3. Xóa AWS Lambda Function:
+1. Mở [AWS Lambda Console](https://ap-southeast-1.console.aws.amazon.com/lambda/home?region=ap-southeast-1#/functions).
+2. Chọn hàm NutriVisionPredictor.
+3. Nhấp **Actions ➔ Delete** ➔ Xác nhận xóa hàm Lambda.
 
-![delete stack](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+---
 
-5. Xóa các S3 bucket
+#### 4. Xóa Amazon API Gateway:
+1. Mở [Amazon API Gateway Console](https://ap-southeast-1.console.aws.amazon.com/apigateway/main/apis?region=ap-southeast-1).
+2. Chọn API NutriVisionRestApi.
+3. Nhấp **Manage API ➔ Delete** ➔ Xác nhận xóa REST API.
 
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+---
+
+#### 5. Xóa AWS Amplify App (Frontend Hosting):
+1. Mở [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
+2. Chọn ứng dụng AI-NutriVision.
+3. Nhấp **App actions ➔ Delete app** ➔ Nhập `delete` để xác nhận gỡ bỏ ứng dụng Web.
+
+---
+
+#### 6. Xóa Amazon SNS Topic & Subscription:
+1. Mở [Amazon SNS Console](https://ap-southeast-1.console.aws.amazon.com/sns/v3/home?region=ap-southeast-1#/topics).
+2. Chọn Topic NutriVision-AlarmNotifications ➔ Nhấp **Delete**.
+3. Chuyển sang mục **Subscriptions** ➔ Chọn Subscription tương ứng và nhấp **Delete**.
+
+---
+
+#### 7. Xóa Amazon CloudWatch Alarm & Log Group:
+1. Mở [Amazon CloudWatch Console](https://ap-southeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-1).
+2. Chọn mục **Alarms ➔ All alarms** ➔ Chọn Alarm NutriVision-HighLambdaErrors ➔ Nhấp **Actions ➔ Delete**.
+3. Chuyển sang mục **Logs ➔ Log groups** ➔ Chọn Log Group `/aws/lambda/NutriVisionPredictor` ➔ Nhấp **Actions ➔ Delete log group(s)**.

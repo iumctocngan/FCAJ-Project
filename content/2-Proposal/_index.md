@@ -6,92 +6,94 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# AI NutriVision
+# NutriVision
 ## Automated Food Recognition and Nutrition Analysis System on AWS Serverless Infrastructure
 
 ### 1. Executive Summary
-The **AI NutriVision** project addresses daily dietary tracking challenges by automating food recognition and calorie estimation along with macronutrient metrics (Protein, Carbs, Fat, Fiber) directly from meal photos.
+The **NutriVision** project streamlines dietary management by automating food identification and macronutrient calculation (Protein, Carbs, Fat, Fiber) directly from meal photographs using Machine Learning & Computer Vision.
 
-The model is trained on the benchmark **Food-101** dataset (comprising 101,000 images across 101 food categories). To optimize for real-world nutrition tracking, the project performed data cleaning to curate a high-density subset of the **50 most popular food categories** (totaling 50,000 images). The fine-tuned EfficientNet-B0 deep learning model achieves a **Test Top-1 Accuracy of 85.62%** (Weighted Average F1-score of 0.86) across 5,000 independent test images.
+The underlying model is trained on the Food-101 dataset (comprising 101,000 images across 101 food classes). To optimize for practical nutrition tracking, the dataset underwent curated data cleaning to select 50 highest-frequency food categories (50,000 images). An EfficientNet-B0 deep neural network was fine-tuned on this dataset, achieving a Test Top-1 Accuracy of 85.62% (Weighted F1-Score 0.86) across 5,000 independent test images under experimental conditions.
 
-The model is compressed into static ONNX format (15.5 MB) and operates entirely on AWS Serverless architecture (API Gateway, Lambda, S3, DynamoDB, Rekognition, CloudWatch). This solution reduces nutrition logging time from 5 minutes down to under 3 seconds per meal, with a warm Lambda execution duration of **35–50 ms** (total end-to-end web response latency < 150 ms) and superior cost optimization compared to traditional servers.
+The model is exported to an optimized static ONNX format (15.5 MB) and operates on AWS Serverless architecture (Amplify, API Gateway, Lambda, ECR, S3, Rekognition, CloudWatch, SNS). This solution reduces meal logging time to mere seconds per meal while maintaining minimal operational expenditure via pay-per-use billing.
 
 ### 2. Problem Statement
-#### Real-world Challenge
-Calculating daily calories and macronutrient intake (Protein, Carbs, Fat) currently relies heavily on manual logging applications (such as MyFitnessPal, Yazio). Users must manually type food names, estimate portion weights, and search database entries. This multi-step process is tedious and frequently leads to user abandonment within days.
+#### The Challenge
+Calculating daily calories and macronutrient breakdown currently depends heavily on manual-entry apps (such as MyFitnessPal, Yazio). Users must manually search for food names, estimate portion weights, and log each item. This multi-step process introduces high friction, leading to user fatigue and abandonment over time.
 
 #### Proposed Solution
-**AI NutriVision** provides a web interface where users simply capture or upload a meal image. The image is routed via API Gateway to AWS Lambda, where the ONNX model identifies the food dish with a warm compute duration of 35–50ms and returns a detailed nutritional breakdown.
-- **Flexible Fallback AI Mechanism**: To handle out-of-distribution (OOD) dishes outside the 50 trained classes, the system automatically integrates **Amazon Rekognition** whenever the primary model confidence falls below 60%. Rekognition returns general labels (e.g., "Dish", "Noodle", "Soup"), which Lambda fuzzy-matches against `calorie_map.json` or assigns default macro estimates (`general_food`), while logging the image to `s3://.../ood_logs/` for future retraining.
-- **Dynamic Portion Scaling**: The system allows users to select portion size multipliers directly on the Web UI (Small 0.7x, Medium 1.0x, Large 1.5x, Special 2.0x), enabling Lambda to automatically scale calories and macros based on actual consumption.
-- Recognition history and nutrition metrics are automatically persisted into **Amazon DynamoDB** to build a personal food diary.
+NutriVision delivers a modern web application hosted on AWS Amplify Hosting, supporting secure HTTPS access from any device without requiring complex user registration. Users simply capture or upload a meal photo. The image is processed through API Gateway to AWS Lambda for rapid food classification and nutrition estimation.
+- **AI Fallback Mechanism (Amazon Rekognition)**: When the primary ONNX model confidence drops below 60% (due to poor lighting, challenging angles, or partial occlusion), the system automatically triggers Amazon Rekognition to scan general visual labels and maps them against the 50 learned food items in the database. Note: This mechanism recovers confidence for dishes within the 50 defined categories and does not classify out-of-scope foods. All low-confidence images are automatically saved to s3://.../ood_logs/ for offline inspection and retraining.
+- **Flexible Portion Scaling**: The Web UI enables users to select standard portion multipliers (Small 0.7x, Medium 1.0x, Large 1.5x, Extra 2.0x), prompting Lambda to proportionally scale calories and macronutrients accordingly.
 
-#### Benefits and Return on Investment (ROI)
-- **Time Optimization**: Reduces daily logging time by 90% for gym-goers, dieters, or patients tracking nutrition with a single photo capture.
-- **Cost Efficiency**: Serverless architecture incurs costs strictly per actual request without 24/7 server maintenance fees, maximizing operational budget optimization.
+#### Benefits & Return on Investment (ROI)
+- **Time Savings**: Substantially cuts daily dietary logging effort for fitness enthusiasts, dieters, and patients needing nutritional monitoring via a single photo upload.
+- **Cost Efficiency**: Serverless compute incurs zero idle server costs, executing on-demand and minimizing operational overhead.
 
 ### 3. Solution Architecture
-![AI NutriVision Architecture Diagram](/FCAJ-Project/images/2-Proposal/architecture.png)
+![NutriVision Architecture Diagram](/FCAJ-Project/images/2-Proposal/solution_architecture.drawio.png)
 
-#### AWS Services Used:
-1. **Amazon API Gateway**: Receives HTTPS `POST /predict` requests from the Web UI, authenticates API Keys, manages CORS configurations, protects against DDoS, and enforces Rate Limiting (20 req/s).
-2. **AWS Lambda**: Serverless compute function running Python 3.11, responsible for Base64 image decoding, blur/dark quality checks, running ONNX Runtime inference, and scaling calories by user-selected portion size (0.7x – 2.0x).
-3. **Amazon S3**: Central storage for `food_model.onnx` (15.5 MB), nutritional lookup database `calorie_map.json`, and out-of-distribution image logs (`ood_logs/`). Uses S3 Lifecycle Policy to automatically expire logs after 90 days.
-4. **Amazon Rekognition**: Managed AI service serving as a Fallback Engine. When the primary ONNX model confidence is < 60%, Lambda triggers Rekognition for general label detection, avoiding system deadlocks.
-5. **Amazon DynamoDB**: Serverless NoSQL database storing prediction records (`prediction_id`, `timestamp`, `food_class`, `confidence`, `calories`, `macronutrients`).
-6. **Amazon CloudWatch**: Monitors Lambda performance, API latency (P95 Latency), error rates, and triggers alarms during unexpected failures.
+#### AWS Services Utilized (8 Core Services):
+1. **AWS Amplify**: Hosts static frontend assets with automated GitHub CI/CD, global CloudFront CDN distribution, and managed HTTPS certificates.
+2. **Amazon API Gateway**: Manages the REST API endpoint POST /predict with CORS handling and rate limiting (20 req/s) for abuse prevention.
+3. **AWS Lambda**: Executes serverless inference (Python 3.12 / ONNX Runtime / Boto3), handles image decoding, quality validation, and portion scaling (0.7x – 2.0x).
+4. **Amazon ECR**: Hosts and manages the Lambda Docker container image bundling the AI model and native C++ runtime dependencies.
+5. **Amazon S3**: Centralized object storage for model weights food_model.onnx (15.5 MB), calorie_map.json database, and Out-of-Distribution audit images (ood_logs/).
+6. **Amazon Rekognition**: Fallback AI engine. Triggers label detection when primary model confidence drops below 60%.
+7. **Amazon CloudWatch**: Monitors P95 Latency, manages Log Groups, and configures alarms for system anomaly detection.
+8. **Amazon SNS**: Dispatches immediate email notifications to engineers whenever CloudWatch alarms trigger.
 
-### 4. Technical Implementation & MLOps Optimization
-Project implementation was executed in 2 core phases:
+### 4. Technical Implementation & Real-World MLOps
+The project is organized into two primary phases:
 
-#### Phase 1: Data Cleaning, AI Model Training & Compression (Google Colab GPU)
-- **Data Selection & Cleaning**: The raw Food-101 dataset contains 101,000 images with some label noise. The project conducted manual data cleaning combined with noise detection algorithms to select the 50 most popular food categories based on 3 scientific criteria:
-  1. *Consumption Frequency*: Prioritizing widely consumed dishes in Asian and Western diets (e.g., Pho, Fried Rice, Pizza, Sushi, Hamburger, Steak, Salads, etc.).
-  2. *Nutritional Complexity*: Selecting dishes with diverse macronutrient structures (Protein, Carbs, Fat) requiring strict caloric monitoring.
-  3. *Redundancy Elimination*: Filtering out niche regional dishes or items with low lookup demand in fitness tracking applications.
-  The resulting 50-class dataset (50,000 images) was partitioned into standard splits: 37,500 training images (750/class), 7,500 validation images (150/class), and 5,000 independent test images (100/class).
-- **Training & Evaluation**: Utilized an `EfficientNet-B0` backbone with a 2-stage fine-tuning workflow (Phase 1: Freeze Backbone for 3 epochs; Phase 2: Full Unfreeze with Cosine Annealing scheduler for 7 epochs). Results achieved **Test Top-1 Accuracy of 85.62%** and a Weighted Average F1-score of 0.86.
-- **Model Compression & INT8 Roadmap**: Converted the PyTorch checkpoint (`.pth`) into static `food_model.onnx` (15.5 MB) format. Future work includes INT8 quantization to compress the model to **~1.8 MB**, reducing latency by an additional 40%.
+#### Phase 1: Data Preparation, Training & ONNX Export (Google Colab GPU)
+- **Data Curation**: From the original Food-101 dataset (101 classes), the project selected 50 top consumed food categories (50,000 images) according to three technical criteria:
+  1. *Consumption Frequency & Popularity*: Balances Asian staples (Pho, Fried Rice, Pad Thai, Sushi, Bibimbap, Gyoza) and Western staples (Hamburger, Pizza, Steak, Spaghetti, Club Sandwich, Mac & Cheese).
+  2. *Dietary Diversity*: Spans 6 balanced nutritional categories: High-protein dishes (Steak, Ribs, Wings), Grains & Noodles (Pho, Fried Rice), Fast food (Burger, Pizza), Salads (Caesar, Greek), Breakfast (Omelette, Pancakes), and Desserts (Cheesecake, Apple Pie).
+  3. *Visual Separability*: Excludes visually ambiguous classes to maintain high classification precision and compact model footprint.
+  - The curated 50-dish dataset is partitioned into: 37,500 training images (750/class), 7,500 validation images (150/class), and 5,000 independent test images (100/class).
+- **Training & ONNX Serialization**: EfficientNet-B0 backbone fine-tuned via a two-stage protocol (Freeze & Unfreeze). Achieved Test Top-1 Accuracy of 85.62% on 5,000 test images in experiment benchmarks. The PyTorch checkpoint is exported to a static food_model.onnx (15.5 MB) artifact for minimal storage and rapid initialization.
 
-#### Phase 2: Cloud Infrastructure Deployment & CI/CD (AWS CloudFormation / SAM)
-- Packaged Lambda source code with required dependencies (`onnxruntime`, `Pillow`, `boto3`).
-- Developed IaC template `infrastructure/template.yaml` (AWS SAM / CloudFormation) integrating automated CI/CD pipelines to test and deploy with a single CLI command.
-- **Periodic Retraining Strategy**: Out-of-distribution images collected in `s3://.../ood_logs/` will be evaluated monthly. Upon reaching 1,000 new images, the system automatically triggers retraining pipelines to expand coverage to 100+ food classes.
+#### Phase 2: Cloud Deployment & Operational Observability
+- **Frontend CI/CD Automation**: Connects the GitHub repository to AWS Amplify Hosting. Each commit pushed to the main branch automatically triggers build and zero-downtime deployment in seconds.
+- **Infrastructure & Backend Deployment**: Packages Lambda Function as a Docker Image, pushes to Amazon ECR, and provisions AWS resources (Lambda, API Gateway, S3, Rekognition, CloudWatch, SNS) via AWS Console GUI and AWS CLI.
+- **Monitoring & Edge Case Handling**:
+  - Centralizes execution telemetry in Amazon CloudWatch Log Groups.
+  - Automatically captures low-confidence samples (< 60%) to s3://.../ood_logs/.
+  - *Current Workflow*: OOD data auditing and retraining is handled via a human-in-the-loop workflow on Google Colab GPU.
 
-### 5. Security & Privacy
-- **Authentication & Authorization**: REST API access restricted via API Keys / Cognito User Pools. IAM Least-Privilege Roles applied to Lambda (granting read access only to the specified S3 bucket and write access to the DynamoDB table).
-- **Data Encryption**: Server-Side Encryption (SSE-S3) enabled on Amazon S3 and DynamoDB data encryption at-rest.
-- **Data Retention Management**: Configured S3 Lifecycle Rules to automatically delete `ood_logs/` images after 90 days to protect user privacy and optimize storage costs.
+> [!NOTE] Future Roadmap: Fully automate retraining using Amazon SageMaker Pipelines (data labeling via SageMaker Ground Truth, automated retraining triggers, model registry sync, and zero-downtime Lambda updates).
 
-### 6. Timeline & Milestones
-- **Weeks 1–2**: Food-101 dataset analysis, label cleaning, 50-class selection, Draw.io architecture design, and cost estimation.
-- **Weeks 3–4**: AI model fine-tuning on Colab GPU (achieving Test Top-1 Acc 85.62% and F1-Score 0.86), ONNX export, and local edge-case testing.
-- **Weeks 5–6**: CloudFormation/SAM template writing, resource deployment to region `ap-southeast-1` (Singapore), and Web UI integration with API Gateway.
-- **Weeks 7–8**: CloudWatch performance evaluation (Cold Start vs Warm Start analysis), step-by-step Workshop documentation writing, and resource cleanup verification (`cleanup.sh`).
+### 5. Project Roadmap & Milestones
+Executed over a 2-month timeframe across 4 key stages:
+- **Month 1 (First Half - Weeks 1-2)**: Analyze Food-101 dataset, clean label noise, curate 50 food categories, draft Draw.io architecture diagrams, and evaluate AWS cost projections.
+- **Month 1 (Second Half - Weeks 3-4)**: Fine-tune EfficientNet-B0 model on Colab GPU, export ONNX artifact, build Lambda inference code, and validate locally.
+- **Month 2 (First Half - Weeks 5-6)**: Deploy all AWS Serverless infrastructure to ap-southeast-1 (Singapore) using Docker Container / AWS CLI, host Frontend on AWS Amplify Hosting, and connect Web UI with API Gateway & Lambda.
+- **Month 2 (Second Half - Weeks 7-8)**: Evaluate CloudWatch performance metrics (Cold vs Warm Start), configure SNS Email Alarms, execute comprehensive testing, and finalize step-by-step Workshop documentation.
 
-### 7. Budget Estimation & Cost Management
-Cost calculations are derived from the official AWS Pricing Calculator for an operational scale of **100,000 requests/month** (~3,300 requests/day - realistic production scale):
+### 6. Budget Estimation & Cost Management
 
-| AWS Service | Monthly Workload | List Price Cost |
-|---|---|---|
-| **Amazon API Gateway** | 100,000 REST API calls ($3.50 / 1M) | $0.35 USD |
-| **AWS Lambda** | 100,000 invocations (512MB RAM, 50ms/req) | $0.04 USD |
-| **Amazon S3** | 5.0 GB storage + 10,000 PUT/GET requests | $0.15 USD |
-| **Amazon DynamoDB** | 100,000 Write Units (WCU) + 2 GB data storage | $1.50 USD |
-| **Amazon Rekognition** | ~10,000 Fallback AI calls (10% of requests) | $10.00 USD |
-| **Amazon CloudWatch** | 5 GB Log Storage + 2 CloudWatch Alarms | $2.50 USD |
-| **TOTAL MONTHLY COST** | **100,000 requests/month scale** | **~ $14.54 USD / month** |
+| Service | Estimated Cost |
+|---|---|
+| AWS Amplify Hosting | ~$0.50/month |
+| Amazon API Gateway | ~$0.35/month |
+| AWS Lambda | ~$0.00/month |
+| Amazon ECR | ~$0.03/month |
+| Amazon S3 (Storage & Requests) | ~$0.15/month |
+| Amazon Rekognition (Fallback AI) | ~$5.00/month |
+| Amazon CloudWatch | ~$0.02/month |
+| Amazon SNS | ~$0.00/month |
+| **Total Estimate** | **~$6.05 USD/month** |
 
-> [!TIP] Superior Cost Optimization & Rekognition Risk Management:
-> - **Serverless Advantage**: Compared to maintaining a 24/7 GPU EC2 server ($150–$300/month), Serverless saves >90% in operational costs.
-> - **Rekognition Cost Mitigation (~69% of budget)**: To prevent Rekognition costs from rising if fallback traffic exceeds 10%, the system implements DynamoDB image hash caching for fallback results and dynamic Confidence Threshold tuning post-go-live.
+> [!NOTE] 
+> Standard pricing (Pay-as-you-go) is approximately ~$6.05 USD/month for 100,000 recognitions. Under AWS Free Tier (first year), core infrastructure services are free, reducing actual cost to $0.00 – $5.00 USD/month (only incurring cost if Rekognition exceeds 5,000 free calls).
 
-### 8. Risk Assessment & Mitigation
-- **Out-of-Distribution (OOD) Dish Risk**: Unseen food dishes outside the 50 classes ➔ *Mitigation*: If confidence < 60%, automatically trigger Amazon Rekognition label detection, fuzzy-match labels with `calorie_map.json` or assign a default nutritional group, while logging the image to `s3://.../ood_logs/`.
-- **Lambda Cold Start Risk**: Initial call after container idle suffers ~350–500ms latency ➔ *Mitigation*: Maintaining an ultra-lightweight ONNX model (15.5 MB) keeps cold start minimal. For production environments requiring consistent SLA < 150ms, AWS Lambda Provisioned Concurrency can be enabled.
-- **Image Quality Risk**: Uploaded photos are blurry, dark, or corrupted ➔ *Mitigation*: Image quality check function on Lambda intercepts low-quality images immediately, returning HTTP 400/422 with guidance for re-shooting.
-- **Cost Overage Risk**: Traffic spam or denial of service ➔ *Mitigation*: Configure API Gateway throttling (limit 20 req/s) and set up CloudWatch Budget Alarms sending email alerts if monthly costs exceed threshold limits.
+### 7. Risk Management & Mitigation Strategies
+- **Out-of-Distribution (OOD) Food Risk**: Unlearned food items outside the 50 classes ➔ *Mitigation*: If confidence < 60%, automatically trigger Amazon Rekognition and attempt to map the result to the nearest dish among the 50 defined items. If no valid mapping is found, the system deliberately returns HTTP 422 rather than producing inaccurate nutritional data, preserving data integrity. All OOD images are stored to s3://.../ood_logs/ for offline retraining.
+- **Lambda Cold Start Risk**: First-time invocation after container idle may incur latency ➔ *Mitigation*: Maintain lightweight Python execution logic to minimize cold start duration. For production environments requiring consistent SLA, consider AWS Lambda Provisioned Concurrency.
+- **Input Image Quality Risk**: Photos that are blurry, dark, or corrupted ➔ *Mitigation*: Image format and quality validation intercept invalid payloads immediately, returning error responses with user re-shooting guidance.
+- **Cost Overrun & Incident Risk**: Request spamming or Lambda runtime errors ➔ *Mitigation*: Configure API Gateway Throttling (20 req/s limit) and CloudWatch Budget Alarms to trigger Amazon SNS real-time email notifications to administrators.
 
-### 9. Expected Outcomes
-1. **Technical Excellence**: Successfully built an end-to-end Serverless AI Computer Vision system with ultra-low warm Lambda compute latency (35–50ms), total web response latency < 150ms, auto-scaling capabilities, and 100% edge-case handling. Accurately classifies the 50 most popular food categories with a **Test Top-1 Accuracy of 85.62%** (Weighted Average F1-score of 0.86).
-2. **Practical Value**: Delivers an automated nutrition tracking solution for users while providing a standardized AWS lab template for the FCAJ community on deploying Serverless AI/ML workloads.
+### 8. Expected Outcomes
+1. **Technical Delivery**: Successfully deploy an end-to-end Serverless Computer Vision system hosted on AWS Amplify with automatic scaling and edge-case handling. The 50-dish classification model achieves a Test Top-1 Accuracy of 85.62% (Weighted F1-Score 0.86).
+2. **Economic & Operational Value**: Eliminates idle server costs compared to legacy EC2 instances, providing rapid response times at only a few dollars per month for 100,000 requests.
+3. **Educational Material**: Complete step-by-step Workshop documentation with real AWS Console screenshots for easy reproducibility.
