@@ -51,8 +51,10 @@ To prevent unexpected ongoing cloud charges after completing the workshop, follo
 
 #### 5. Delete AWS Amplify App (Frontend Hosting):
 1. Open [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
-2. Select application `AI-NutriVision`.
-3. Click **App actions ➔ Delete app** ➔ Enter `delete` to confirm web app removal.
+2. Select application `AI-NutriVision` (or `NutriVision`).
+3. Click **App actions ➔ Delete app** (or **App settings ➔ General settings ➔ Delete app**) ➔ Enter `delete` to confirm web app removal.
+
+![Delete AWS Amplify App](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_amplify.png)
 
 ---
 

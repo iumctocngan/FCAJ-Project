@@ -21,7 +21,10 @@ Push the frontend source files to your GitHub repository (`https://github.com/iu
 #### 2. Create AWS Amplify App via Console GUI:
 1. Sign in to the [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
 2. Click **Create new app** ➔ Select source provider **GitHub** (or Deploy without Git provider).
-3. Connect repository **NutriVision** and select the **main** branch.
+3. Connect repository **iumctocngan/NutriVision** and select the **main** branch.
+
+![AWS Amplify Select Repository and Branch](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_select_repo_branch.png)
+
 4. On the **App settings** step:
    - **App name**: Enter `AI-NutriVision`.
    - **Frontend build command**: Leave empty (pure static HTML/CSS/JS).

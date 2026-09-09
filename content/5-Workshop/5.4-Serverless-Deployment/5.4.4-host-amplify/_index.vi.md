@@ -21,7 +21,10 @@ Push toàn bộ mã nguồn lên repository GitHub của bạn (`https://github.
 #### 2. Khởi tạo AWS Amplify App trên Console GUI:
 1. Đăng nhập vào [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
 2. Nhấp chọn **Create new app** ➔ Chọn nguồn mã nguồn **GitHub** (hoặc Deploy without Git provider).
-3. Kết nối với Repository **NutriVision** và chọn nhánh **main**.
+3. Kết nối với Repository **iumctocngan/NutriVision** và chọn nhánh **main**.
+
+![Chọn Repository và nhánh trên AWS Amplify](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_select_repo_branch.png)
+
 4. Tại bước **App settings**:
    - **App name**: Nhập `AI-NutriVision`.
    - **Frontend build command**: Để trống (ứng dụng Web tĩnh HTML/CSS/JS thuần).
