@@ -7,38 +7,43 @@ pre: " <b> 7. </b> "
 ---
 
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+After 12 weeks in the **AWS First Cloud AI Journey 2026**, I progressed from foundational AWS knowledge to building a complete Cloud & AI project. The following summarizes my experience and suggestions for the program.
 
 ### Overall Evaluation
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**1. Learning Environment**
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+The open learning environment encourages independent research and hands-on practice. The roadmap introduced AWS progressively, from core services to Serverless architecture and real-world application deployment.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**2. Support from Mentors and the Admin Team**
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+The mentors and admin team provided a clear roadmap, learning resources, and project milestones. I especially appreciated being encouraged to research, experiment, and attempt solutions independently before receiving feedback.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**3. Relevance to My Academic Major**
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+The program was highly relevant to Computer Science and added practical experience in Cloud, Machine Learning, APIs, Docker, security, observability, and cost management beyond what I had previously practiced at university.
 
----
+**4. Learning and Skill Development**
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+The most valuable aspect was applying the knowledge to NutriVision. Delivering an end-to-end project strengthened my technical skills alongside project planning, troubleshooting, documentation, and solution presentation.
 
----
+**5. Community and Support**
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+FCAJ members were willing to exchange knowledge and share experience. Learning within the community gave me additional perspectives when selecting the architecture, resolving issues, and improving the product.
+
+**6. Program Organization**
+
+The content followed a logical progression from foundational learning to project delivery. Kick-off activities, workshops, and community events also made the learning experience more varied.
+
+### Highlights
+
+- **Most satisfying outcome:** I developed NutriVision from an initial idea into a working end-to-end AWS system and completed workshop documentation that others can follow.
+- **Area for improvement:** Additional architecture reviews and mid-project demos would help participants receive feedback earlier in the delivery process.
+- **Recommendation:** I would recommend FCAJ to students interested in Cloud and AI because it combines foundational knowledge, practical AWS experience, and real product development.
+
+### Suggestions and Expectations
+
+- Add mentor reviews at key milestones: idea, architecture, prototype, and final demo.
+- Introduce peer-review sessions so participants can learn from one another's approaches and troubleshooting experience.
+- Provide additional checklists for AWS security, cost control, testing, and incident handling.
+- I hope to continue participating in FCAJ's advanced learning activities, community events, and Cloud & AI projects.

@@ -7,7 +7,6 @@ pre: " <b> 3. </b> "
 ---
 
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
 
 ###  [Blog 1 - MLOps trên AWS SageMaker: Từ huấn luyện đến giám sát mô hình](3.1-Blog1/)
 Bài viết phân tích chuyên sâu về quy trình xây dựng hệ thống MLOps toàn diện trên AWS SageMaker. Nội dung bao quát từ việc kiểm soát Data & Concept Drift, tự động hóa workflow với SageMaker Pipelines & Baseline, quản lý phiên bản với Model Registry, giám sát liên tục bằng Model Monitor cho đến vai trò thực tế của Feature Store trong vòng đời ML.

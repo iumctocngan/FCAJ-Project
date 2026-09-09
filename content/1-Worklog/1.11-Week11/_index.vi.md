@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 11"
 date: 2024-01-01
-weight: 1
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
@@ -9,24 +9,22 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-- Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Xây dựng backend suy luận và triển khai mô hình lên kiến trúc AWS Serverless.
+- Phát triển giao diện web, kết nối các thành phần thành một hệ thống hoạt động hoàn chỉnh.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 11/08/2025 | 11/08/2025 | |
-| 3 | - Tìm hiểu AWS và các loại dịch vụ: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - *Thực hành:** Tạo AWS account, cài đặt AWS CLI & cấu hình, cách sử dụng AWS CLI | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu EC2 cơ bản: Instance types, AMI, EBS <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - *Thực hành:** Tạo EC2 instance, kết nối SSH, gắn EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+| --- | --- | --- | --- |
+| 2 | - Xây dựng Lambda inference bằng Python, xử lý ảnh, kiểm tra chất lượng và tính dinh dưỡng theo khẩu phần | 21/09/2026 | 21/09/2026 |
+| 3 | - Đóng gói backend và mô hình ONNX thành Docker Image, đẩy lên Amazon ECR và triển khai Lambda | 22/09/2026 | 22/09/2026 |
+| 4 | - Tạo S3 lưu artefact và ảnh độ tin cậy thấp; tích hợp Amazon Rekognition làm cơ chế AI fallback | 23/09/2026 | 23/09/2026 |
+| 5 | - Cấu hình API Gateway POST /predict, CORS, Rate Limiting và kiểm thử kết nối với Lambda | 24/09/2026 | 24/09/2026 |
+| 6 | - Hoàn thiện Web UI, kết nối API và triển khai frontend lên AWS Amplify Hosting | 25/09/2026 | 25/09/2026 |
 
 ### Kết quả đạt được tuần 11:
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: Compute, Storage, Networking, Database.
-- Đã tạo và cấu hình AWS Free Tier account thành công.
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm: Access Key, Secret Key, Region mặc định.
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như kiểm tra thông tin tài khoản và cấu hình, lấy danh sách region, xem dịch vụ EC2, tạo và quản lý key pair, kiểm tra thông tin dịch vụ đang chạy.
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+- Triển khai thành công backend suy luận ONNX trên AWS Lambda bằng Docker Container Image từ Amazon ECR.
+- Hoàn thiện API POST /predict với kiểm tra đầu vào, CORS, Rate Limiting và phản hồi dinh dưỡng theo khẩu phần.
+- Tích hợp Amazon S3 để lưu artefact, ảnh OOD và Amazon Rekognition làm cơ chế dự phòng khi độ tin cậy dưới 60%.
+- Đưa Web UI lên AWS Amplify và kết nối thành công luồng end-to-end từ tải ảnh đến hiển thị kết quả.

@@ -6,36 +6,45 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Sau 12 tuần tham gia **AWS First Cloud AI Journey 2026**, em có cơ hội học theo lộ trình từ kiến thức AWS nền tảng đến xây dựng một dự án Cloud & AI hoàn chỉnh. Dưới đây là những đánh giá và đề xuất của em dành cho chương trình.
 
 ### Đánh giá chung
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+**1. Môi trường học tập**
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Môi trường học tập cởi mở, khuyến khích tự nghiên cứu và thực hành. Lộ trình giúp em tiếp cận AWS theo từng bước, từ các dịch vụ cơ bản đến kiến trúc Serverless và triển khai ứng dụng thực tế.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+**2. Sự hỗ trợ của mentor và team admin**
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Mentor và team admin cung cấp lộ trình, tài liệu và các mốc công việc rõ ràng. Em đánh giá cao cách mentor định hướng để học viên tự tìm hiểu, thử nghiệm và giải quyết vấn đề trước khi nhận góp ý hoàn thiện.
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+**3. Sự phù hợp với chuyên ngành**
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+Nội dung chương trình phù hợp với chuyên ngành Khoa học máy tính và bổ sung nhiều kiến thức thực tế về Cloud, Machine Learning, API, Docker, bảo mật, giám sát và quản lý chi phí mà em chưa có nhiều cơ hội thực hành tại trường.
+
+**4. Cơ hội học hỏi và phát triển kỹ năng**
+
+Giá trị lớn nhất của chương trình là cơ hội áp dụng kiến thức vào dự án NutriVision. Quá trình thực hiện end-to-end giúp em rèn luyện đồng thời kỹ năng kỹ thuật, lập kế hoạch, xử lý sự cố, viết tài liệu và trình bày giải pháp.
+
+**5. Cộng đồng và tinh thần hỗ trợ**
+
+Các thành viên FCAJ sẵn sàng trao đổi kiến thức và chia sẻ kinh nghiệm. Việc học cùng cộng đồng giúp em có thêm góc nhìn khi lựa chọn kiến trúc, khắc phục lỗi và hoàn thiện sản phẩm.
+
+**6. Tổ chức chương trình**
+
+Nội dung được sắp xếp theo tiến trình hợp lý giữa học kiến thức nền tảng và thực hiện dự án. Các hoạt động kick-off, workshop và sự kiện cộng đồng giúp trải nghiệm học tập đa dạng hơn.
 
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+### Những điều nổi bật
+
+- **Điều hài lòng nhất:** Em đã tự xây dựng và triển khai NutriVision từ ý tưởng ban đầu thành hệ thống hoạt động end-to-end trên AWS, đồng thời hoàn thiện tài liệu workshop để người khác có thể thực hành lại.
+- **Điểm có thể cải thiện:** Chương trình có thể bổ sung thêm các buổi review kiến trúc và demo giữa kỳ để học viên nhận phản hồi sớm hơn trước khi hoàn thiện dự án.
+- **Mức độ sẵn sàng giới thiệu:** Em sẵn sàng giới thiệu FCAJ cho các bạn quan tâm đến Cloud và AI vì chương trình kết hợp tốt giữa kiến thức nền tảng, thực hành AWS và phát triển một sản phẩm thực tế.
 
 
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+### Đề xuất và mong muốn
+
+- Tăng số buổi mentor review theo từng mốc: ý tưởng, kiến trúc, bản thử nghiệm và demo cuối.
+- Bổ sung hoạt động peer review để học viên học hỏi cách tiếp cận và kinh nghiệm xử lý lỗi của nhau.
+- Cung cấp thêm checklist mẫu về bảo mật, kiểm soát chi phí, kiểm thử và xử lý sự cố trên AWS.
+- Em mong muốn tiếp tục tham gia các hoạt động chuyên sâu, sự kiện cộng đồng và dự án Cloud & AI của FCAJ trong tương lai.

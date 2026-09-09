@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
@@ -9,24 +9,22 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-- Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Xác định bài toán, đối tượng người dùng và phạm vi MVP cho dự án NutriVision.
+- Lập kế hoạch triển khai end-to-end và thiết kế kiến trúc tổng thể cho hệ thống.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 11/08/2025 | 11/08/2025 | |
-| 3 | - Tìm hiểu AWS và các loại dịch vụ: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - *Thực hành:** Tạo AWS account, cài đặt AWS CLI & cấu hình, cách sử dụng AWS CLI | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu EC2 cơ bản: Instance types, AMI, EBS <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - *Thực hành:** Tạo EC2 instance, kết nối SSH, gắn EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+| --- | --- | --- | --- |
+| 2 | - Khảo sát vấn đề theo dõi dinh dưỡng và đề xuất ý tưởng nhận diện món ăn từ hình ảnh | 07/09/2026 | 07/09/2026 |
+| 3 | - Xác định người dùng mục tiêu, yêu cầu chức năng, tiêu chí thành công và phạm vi MVP | 08/09/2026 | 08/09/2026 |
+| 4 | - Nghiên cứu giải pháp, lựa chọn EfficientNet-B0, ONNX và các dịch vụ AWS Serverless phù hợp | 09/09/2026 | 09/09/2026 |
+| 5 | - Thiết kế kiến trúc tổng thể và luồng dữ liệu từ Web UI đến API, mô hình AI, lưu trữ và giám sát | 10/09/2026 | 10/09/2026 |
+| 6 | - Chia nhỏ công việc, lập tiến độ tuần 10–12, dự toán chi phí và rà soát rủi ro | 11/09/2026 | 11/09/2026 |
 
 ### Kết quả đạt được tuần 9:
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: Compute, Storage, Networking, Database.
-- Đã tạo và cấu hình AWS Free Tier account thành công.
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm: Access Key, Secret Key, Region mặc định.
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như kiểm tra thông tin tài khoản và cấu hình, lấy danh sách region, xem dịch vụ EC2, tạo và quản lý key pair, kiểm tra thông tin dịch vụ đang chạy.
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+- Thống nhất ý tưởng NutriVision: nhận diện món ăn và ước tính dinh dưỡng từ ảnh chụp.
+- Xác định rõ phạm vi MVP, đầu vào/đầu ra, tiêu chí đánh giá và các trường hợp biên cần xử lý.
+- Hoàn thành sơ đồ kiến trúc AWS Serverless và kế hoạch triển khai end-to-end cho ba tuần tiếp theo.
+- Xây dựng backlog, mốc bàn giao, dự toán chi phí và phương án giảm thiểu rủi ro ban đầu.

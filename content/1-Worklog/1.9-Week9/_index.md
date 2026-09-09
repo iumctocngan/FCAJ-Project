@@ -1,7 +1,7 @@
 ---
-title: "Worklog Week 9"
+title: "Week 9 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
@@ -9,24 +9,22 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Objectives:
 
-- Connect and get acquainted with First Cloud AI Journey members.
-- Understand fundamental AWS services and how to use the AWS Console & CLI.
+- Define the problem, target users, and MVP scope for the NutriVision project.
+- Plan the end-to-end delivery and design the system's overall architecture.
 
 ### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Resource |
-| --- | --- | --- | --- | --- |
-| Mon | - Get acquainted with FCAJ members <br> - Read and note internal rules and regulations at the internship unit | 11/08/2025 | 11/08/2025 | |
-| Tue | - Learn about AWS and core service categories: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Wed | - Create AWS Free Tier account <br> - Learn AWS Console & AWS CLI <br> - *Hands-on:** Create AWS account, install & configure AWS CLI, use AWS CLI commands | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Thu | - Learn EC2 basics: Instance types, AMI, EBS <br> - Remote SSH methods into EC2 <br> - Learn about Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Fri | - *Hands-on:** Launch EC2 instance, SSH connection, attach EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date |
+| --- | --- | --- | --- |
+| 2 | - Study nutrition-tracking pain points and propose food recognition from meal photos | 07/09/2026 | 07/09/2026 |
+| 3 | - Define target users, functional requirements, success criteria, and MVP scope | 08/09/2026 | 08/09/2026 |
+| 4 | - Evaluate solutions and select EfficientNet-B0, ONNX, and suitable AWS Serverless services | 09/09/2026 | 09/09/2026 |
+| 5 | - Design the overall architecture and data flow across the Web UI, API, AI model, storage, and monitoring | 10/09/2026 | 10/09/2026 |
+| 6 | - Break down the work, plan Weeks 10–12, estimate costs, and review risks | 11/09/2026 | 11/09/2026 |
 
 ### Week 9 Achievements:
 
-- Understood what AWS is and grasped fundamental service categories: Compute, Storage, Networking, Database.
-- Successfully created and configured an AWS Free Tier account.
-- Familiarized with AWS Management Console and learned how to navigate and access services via the web interface.
-- Installed and configured AWS CLI on local machine including Access Key, Secret Key, and default Region.
-- Used AWS CLI to perform basic operations such as checking account info and configuration, listing regions, viewing EC2 services, creating and managing key pairs, and checking running service status.
-- Capable of navigating both the web console and CLI to manage AWS resources in parallel.
+- Finalized the NutriVision concept: recognizing food and estimating nutrition from meal photos.
+- Defined the MVP scope, inputs and outputs, evaluation criteria, and edge cases.
+- Completed the AWS Serverless architecture and end-to-end delivery plan for the next three weeks.
+- Created the backlog, delivery milestones, initial cost estimate, and risk mitigation plan.

@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 12"
 date: 2024-01-01
-weight: 1
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
@@ -9,24 +9,22 @@ pre: " <b> 1.12. </b> "
 
 ### Mục tiêu tuần 12:
 
-- Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Kiểm thử, giám sát và hoàn thiện hệ thống NutriVision trước khi bàn giao.
+- Hoàn thành tài liệu workshop, demo và tổng kết toàn bộ quá trình end-to-end.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 11/08/2025 | 11/08/2025 | |
-| 3 | - Tìm hiểu AWS và các loại dịch vụ: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - *Thực hành:** Tạo AWS account, cài đặt AWS CLI & cấu hình, cách sử dụng AWS CLI | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu EC2 cơ bản: Instance types, AMI, EBS <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - *Thực hành:** Tạo EC2 instance, kết nối SSH, gắn EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+| --- | --- | --- | --- |
+| 2 | - Kiểm thử end-to-end luồng chính, ảnh chất lượng thấp, món ngoài phạm vi và các lỗi đầu vào | 28/09/2026 | 28/09/2026 |
+| 3 | - Đo latency, phân tích cold start/warm start và tối ưu hiệu năng, kích thước payload, thông báo lỗi | 29/09/2026 | 29/09/2026 |
+| 4 | - Thiết lập CloudWatch Logs, Alarms và Amazon SNS gửi email cảnh báo | 30/09/2026 | 30/09/2026 |
+| 5 | - Hoàn thiện tài liệu kiến trúc, hướng dẫn workshop từng bước, chi phí và quy trình dọn dẹp tài nguyên | 01/10/2026 | 01/10/2026 |
+| 6 | - Chạy demo cuối, ghi nhận phản hồi, sửa lỗi còn lại và tổng kết kết quả dự án | 02/10/2026 | 02/10/2026 |
 
 ### Kết quả đạt được tuần 12:
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: Compute, Storage, Networking, Database.
-- Đã tạo và cấu hình AWS Free Tier account thành công.
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm: Access Key, Secret Key, Region mặc định.
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như kiểm tra thông tin tài khoản và cấu hình, lấy danh sách region, xem dịch vụ EC2, tạo và quản lý key pair, kiểm tra thông tin dịch vụ đang chạy.
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+- Xác nhận hệ thống hoạt động ổn định qua các kịch bản kiểm thử chức năng, lỗi đầu vào và AI fallback.
+- Hoàn thiện giám sát bằng Amazon CloudWatch và cảnh báo sự cố qua Amazon SNS.
+- Hoàn thành tài liệu workshop, hướng dẫn triển khai, kiểm thử, vận hành và dọn dẹp tài nguyên.
+- Demo và bàn giao NutriVision thành công, khép kín quy trình từ ý tưởng, lập kế hoạch, xây dựng đến hoàn thiện sản phẩm.

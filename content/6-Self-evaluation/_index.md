@@ -7,30 +7,29 @@ pre: " <b> 6. </b> "
 ---
 
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+During the 12-week **AWS First Cloud AI Journey 2026** program, I strengthened my cloud computing fundamentals and applied them directly to the **NutriVision** project. I completed the end-to-end process from problem definition and planning through data preparation, model training, deployment, monitoring, and system completion on AWS.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+The project improved my skills in AWS, Python, Machine Learning, ONNX, Docker, and Serverless architecture. I also developed stronger research, project planning, testing, technical writing, and presentation skills. I proactively addressed implementation issues, incorporated mentor feedback, and completed each project milestone according to plan.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+### Evaluation by Criteria
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+| No. | Criteria | Evidence | Good | Fair | Average |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Professional knowledge & skills** | Applied AWS, Serverless, and Machine Learning to build NutriVision | ✅ | ☐ | ☐ |
+| 2 | **Ability to learn** | Independently studied AWS services and new technologies during implementation | ✅ | ☐ | ☐ |
+| 3 | **Proactiveness** | Analyzed requirements, researched documentation, and proposed solutions | ✅ | ☐ | ☐ |
+| 4 | **Sense of responsibility** | Completed project and documentation milestones according to plan | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Followed the program schedule, milestones, and working process | ✅ | ☐ | ☐ |
+| 6 | **Growth mindset** | Accepted feedback, fixed issues, and improved the solution iteratively | ✅ | ☐ | ☐ |
+| 7 | **Communication** | Reported progress and presented the solution with reasonable clarity | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | Exchanged ideas, offered support, and incorporated input from mentors and FCAJ members | ✅ | ☐ | ☐ |
+| 9 | **Professional conduct** | Respected program rules, feedback, and team members' perspectives | ✅ | ☐ | ☐ |
+| 10 | **Problem-solving skills** | Investigated deployment issues, edge cases, and appropriate trade-offs | ☐ | ✅ | ☐ |
+| 11 | **Contribution to the project** | Delivered a reusable product, source code, and workshop documentation | ✅ | ☐ | ☐ |
+| 12 | **Overall assessment** | Completed the learning objectives and end-to-end project | ✅ | ☐ | ☐ |
 
 ### Needs Improvement
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+- Improve Infrastructure as Code and CI/CD skills to automate deployment steps that are currently configured manually.
+- Continue improving model accuracy, out-of-scope food handling, and the retraining workflow.
+- Communicate more concisely and strengthen time management and situational response in teamwork.

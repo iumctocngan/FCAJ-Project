@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 10"
 date: 2024-01-01
-weight: 1
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
@@ -9,24 +9,22 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-- Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Chuẩn bị dữ liệu và xây dựng mô hình nhận diện món ăn cho NutriVision.
+- Đánh giá mô hình, tối ưu kích thước và chuẩn bị artefact để tích hợp vào backend.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 11/08/2025 | 11/08/2025 | |
-| 3 | - Tìm hiểu AWS và các loại dịch vụ: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - *Thực hành:** Tạo AWS account, cài đặt AWS CLI & cấu hình, cách sử dụng AWS CLI | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Tìm hiểu EC2 cơ bản: Instance types, AMI, EBS <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - *Thực hành:** Tạo EC2 instance, kết nối SSH, gắn EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+| --- | --- | --- | --- |
+| 2 | - Thu thập, khảo sát và chọn 50 lớp món ăn phổ biến từ bộ dữ liệu Food-101 | 14/09/2026 | 14/09/2026 |
+| 3 | - Làm sạch dữ liệu, chia tập train/validation/test và xây dựng pipeline tiền xử lý ảnh | 15/09/2026 | 15/09/2026 |
+| 4 | - Fine-tune EfficientNet-B0 trên Google Colab GPU và theo dõi quá trình huấn luyện | 16/09/2026 | 16/09/2026 |
+| 5 | - Đánh giá Accuracy, Precision, Recall, F1-score; phân tích confusion matrix và lỗi dự đoán | 17/09/2026 | 17/09/2026 |
+| 6 | - Xuất mô hình sang ONNX, kiểm thử suy luận cục bộ và hoàn thiện calorie_map.json | 18/09/2026 | 18/09/2026 |
 
 ### Kết quả đạt được tuần 10:
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: Compute, Storage, Networking, Database.
-- Đã tạo và cấu hình AWS Free Tier account thành công.
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm: Access Key, Secret Key, Region mặc định.
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như kiểm tra thông tin tài khoản và cấu hình, lấy danh sách region, xem dịch vụ EC2, tạo và quản lý key pair, kiểm tra thông tin dịch vụ đang chạy.
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+- Hoàn thành tập dữ liệu 50 lớp món ăn và pipeline tiền xử lý dùng thống nhất khi huấn luyện, kiểm thử.
+- Fine-tune thành công EfficientNet-B0 và đánh giá mô hình trên tập test độc lập.
+- Xuất mô hình ONNX dung lượng 15.5 MB, đạt Test Top-1 Accuracy 85.62% và Weighted F1-Score 0.86.
+- Hoàn thiện tệp ánh xạ dinh dưỡng calorie_map.json và xác nhận kết quả suy luận cục bộ sẵn sàng tích hợp.
