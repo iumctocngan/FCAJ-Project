@@ -59,13 +59,21 @@ pre: " <b> 5.6. </b> "
 #### 6. Xóa Amazon SNS Topic & Subscription:
 1. Mở [Amazon SNS Console](https://ap-southeast-1.console.aws.amazon.com/sns/v3/home?region=ap-southeast-1#/topics).
 2. Chọn Topic `NutriVision-AlarmNotifications` ➔ Nhấp **Delete** ➔ Nhập `delete me` để xác nhận xóa Topic.
-3. Chuyển sang mục **Subscriptions** ➔ Chọn Subscription tương ứng và nhấp **Delete**.
 
 ![Xóa SNS Topic](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_sns.png)
+
+3. Chuyển sang mục **Subscriptions** ➔ Chọn Subscription tương ứng và nhấp **Delete** ➔ Xác nhận xóa Subscription.
+
+![Xóa SNS Subscription](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_sns_subscription.png)
 
 ---
 
 #### 7. Xóa Amazon CloudWatch Alarm & Log Group:
 1. Mở [Amazon CloudWatch Console](https://ap-southeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-1).
-2. Chọn mục **Alarms ➔ All alarms** ➔ Chọn Alarm `NutriVision-HighLambdaErrors` ➔ Nhấp **Actions ➔ Delete**.
-3. Chuyển sang mục **Logs ➔ Log groups** ➔ Chọn Log Group `/aws/lambda/NutriVisionPredictor` ➔ Nhấp **Actions ➔ Delete log group(s)**.
+2. Chọn mục **Alarms ➔ All alarms** ➔ Chọn Alarm `NutriVision-HighLambdaErrors` ➔ Nhấp **Actions ➔ Delete** ➔ Nhấp **Delete** để xác nhận xóa cảnh báo.
+
+![Xóa CloudWatch Alarm](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_cloudwatch_alarm.png)
+
+3. Chuyển sang mục **Logs ➔ Log groups** ➔ Chọn Log Group `/aws/lambda/NutriVisionPredictor` ➔ Nhấp **Actions ➔ Delete log group(s)** ➔ Nhấp **Delete** để xác nhận xóa log group.
+
+![Xóa CloudWatch Log Group](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_cloudwatch_logs.png)

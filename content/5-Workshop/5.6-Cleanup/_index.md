@@ -59,13 +59,21 @@ To prevent unexpected ongoing cloud charges after completing the workshop, follo
 #### 6. Delete Amazon SNS Topic & Subscription:
 1. Open [Amazon SNS Console](https://ap-southeast-1.console.aws.amazon.com/sns/v3/home?region=ap-southeast-1#/topics).
 2. Select Topic `NutriVision-AlarmNotifications` ➔ Click **Delete** ➔ Enter `delete me` to confirm topic deletion.
-3. Navigate to **Subscriptions** ➔ Select the corresponding subscription and click **Delete**.
 
 ![Delete SNS Topic](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_sns.png)
+
+3. Navigate to **Subscriptions** ➔ Select the corresponding subscription and click **Delete** ➔ Confirm subscription deletion.
+
+![Delete SNS Subscription](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_sns_subscription.png)
 
 ---
 
 #### 7. Delete Amazon CloudWatch Alarm & Log Group:
 1. Open [Amazon CloudWatch Console](https://ap-southeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-1).
-2. Go to **Alarms ➔ All alarms** ➔ Select Alarm `NutriVision-HighLambdaErrors` ➔ Click **Actions ➔ Delete**.
-3. Go to **Logs ➔ Log groups** ➔ Select Log Group `/aws/lambda/NutriVisionPredictor` ➔ Click **Actions ➔ Delete log group(s)**.
+2. Go to **Alarms ➔ All alarms** ➔ Select Alarm `NutriVision-HighLambdaErrors` ➔ Click **Actions ➔ Delete** ➔ Click **Delete** to confirm alarm removal.
+
+![Delete CloudWatch Alarm](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_cloudwatch_alarm.png)
+
+3. Go to **Logs ➔ Log groups** ➔ Select Log Group `/aws/lambda/NutriVisionPredictor` ➔ Click **Actions ➔ Delete log group(s)** ➔ Click **Delete** to confirm log group removal.
+
+![Delete CloudWatch Log Group](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_cloudwatch_logs.png)
