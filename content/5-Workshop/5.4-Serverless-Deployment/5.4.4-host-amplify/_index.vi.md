@@ -26,7 +26,7 @@ Push toàn bộ mã nguồn lên repository GitHub của bạn (`https://github.
 ![Chọn Repository và nhánh trên AWS Amplify](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_select_repo_branch.png)
 
 4. Tại bước **App settings**:
-   - **App name**: Nhập `AI-NutriVision`.
+   - **App name**: Nhập `NutriVision`.
    - **Frontend build command**: Để trống (ứng dụng Web tĩnh HTML/CSS/JS thuần).
    - **Build output directory**: Nhập `/`.
 
@@ -37,7 +37,7 @@ Push toàn bộ mã nguồn lên repository GitHub của bạn (`https://github.
 ![AWS Amplify Review and Save and Deploy](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step2_save_deploy.png)
 
 #### 3. Truy cập đường dẫn Web Public HTTPS:
-1. Sau khi quá trình Build & Deploy hoàn tất (khoảng 30 giây), màn hình quản lý **AI-NutriVision: Overview** hiển thị trạng thái phát hành thành công kèm nút **Visit deployed URL**.
+1. Sau khi quá trình Build & Deploy hoàn tất (khoảng 30 giây), màn hình quản lý **NutriVision: Overview** hiển thị trạng thái phát hành thành công kèm nút **Visit deployed URL**.
 
 ![AWS Amplify Overview - Visit deployed URL](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step3_visit_deployed_url.png)
 

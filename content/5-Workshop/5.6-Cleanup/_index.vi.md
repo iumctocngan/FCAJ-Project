@@ -51,7 +51,7 @@ pre: " <b> 5.6. </b> "
 
 #### 5. Xóa AWS Amplify App (Frontend Hosting):
 1. Mở [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
-2. Chọn ứng dụng `AI-NutriVision` (hoặc `NutriVision`).
+2. Chọn ứng dụng `NutriVision`.
 3. Nhấp **App actions ➔ Delete app** (hoặc **App settings ➔ General settings ➔ Delete app**) ➔ Nhập `delete` để xác nhận gỡ bỏ ứng dụng Web.
 
 ![Xóa AWS Amplify App](/FCAJ-Project/images/5-Workshop/5.6-Cleanup/cleanup_amplify.png)

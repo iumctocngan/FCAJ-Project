@@ -26,7 +26,7 @@ Push the frontend source files to your GitHub repository (`https://github.com/iu
 ![AWS Amplify Select Repository and Branch](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_select_repo_branch.png)
 
 4. On the **App settings** step:
-   - **App name**: Enter `AI-NutriVision`.
+   - **App name**: Enter `NutriVision`.
    - **Frontend build command**: Leave empty (pure static HTML/CSS/JS).
    - **Build output directory**: Enter `/`.
 
@@ -37,7 +37,7 @@ Push the frontend source files to your GitHub repository (`https://github.com/iu
 ![AWS Amplify Review and Save and Deploy](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step2_save_deploy.png)
 
 #### 3. Access Public HTTPS Deployed Endpoint:
-1. Once the automated build and deployment finishes (approximately 30 seconds), the **AI-NutriVision: Overview** page displays the deployed status with the **Visit deployed URL** button.
+1. Once the automated build and deployment finishes (approximately 30 seconds), the **NutriVision: Overview** page displays the deployed status with the **Visit deployed URL** button.
 
 ![AWS Amplify Overview - Visit deployed URL](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step3_visit_deployed_url.png)
 
