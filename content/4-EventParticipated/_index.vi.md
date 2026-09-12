@@ -19,7 +19,7 @@ pre: " <b> 4. </b> "
 > * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
 
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+Trong quá trình thực tập, em đã tham gia sự kiện cộng đồng công nghệ. Đây là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là những kết nối và những khoảnh khắc rất tuyệt vời.
 
 ### [Event 1](4.1-Event1/)
 &emsp;**Tên sự kiện:** AWS Vietnam Community Meetup
@@ -27,18 +27,6 @@ Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là
 &emsp;**Thời gian:** 08:30 – 12:00, Thứ Bảy ngày 25/07/2026
 
 &emsp;**Địa điểm:** Tòa nhà Grand Terra - Office Saigon, Ô Chợ Dừa, Đống Đa, Hà Nội
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
-
-
-
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
