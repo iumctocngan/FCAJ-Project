@@ -8,23 +8,21 @@ pre: " <b> 1.10. </b> "
 
 
 ### Mục tiêu tuần 10:
-
-- Chuẩn bị dữ liệu và xây dựng mô hình nhận diện món ăn cho NutriVision.
-- Đánh giá mô hình, tối ưu kích thước và chuẩn bị artefact để tích hợp vào backend.
+- Kiểm thử end-to-end toàn bộ hệ thống NutriVision, tối ưu hiệu năng và độ trễ.
+- Thiết lập giám sát với CloudWatch, cấu hình cảnh báo SNS, hoàn thiện tài liệu workshop và bàn giao dự án.
 
 ### Các công việc cần triển khai trong tuần này:
-
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
 | --- | --- | --- | --- |
-| 2 | - Thu thập, khảo sát và chọn 50 lớp món ăn phổ biến từ bộ dữ liệu Food-101 | 14/09/2026 | 14/09/2026 |
-| 3 | - Làm sạch dữ liệu, chia tập train/validation/test và xây dựng pipeline tiền xử lý ảnh | 15/09/2026 | 15/09/2026 |
-| 4 | - Fine-tune EfficientNet-B0 trên Google Colab GPU và theo dõi quá trình huấn luyện | 16/09/2026 | 16/09/2026 |
-| 5 | - Đánh giá Accuracy, Precision, Recall, F1-score; phân tích confusion matrix và lỗi dự đoán | 17/09/2026 | 17/09/2026 |
-| 6 | - Xuất mô hình sang ONNX, kiểm thử suy luận cục bộ và hoàn thiện calorie_map.json | 18/09/2026 | 18/09/2026 |
+| 2 | - Kiểm thử end-to-end toàn hệ thống: ảnh chuẩn, ảnh chụp góc khó, ảnh món ngoài phạm vi và các lỗi đầu vào | 14/09/2026 | 14/09/2026 |
+| 3 | - Đo độ trễ (latency cold start / warm start), tối ưu tài nguyên Lambda (512 MB memory) và kích thước payload | 15/09/2026 | 15/09/2026 |
+| 4 | - Thiết lập Amazon CloudWatch (Logs, Metrics, Dashboard) và cấu hình cảnh báo Amazon SNS qua Email | 16/09/2026 | 16/09/2026 |
+| 5 | - Hoàn thiện tài liệu kiến trúc, hướng dẫn workshop từng bước, thống kê chi phí và quy trình dọn dẹp tài nguyên | 17/09/2026 | 17/09/2026 |
+| 6 | - Chạy demo nghiệm thu dự án, ghi nhận phản hồi, tổng kết kết quả và hoàn thành bàn giao dự án NutriVision | 18/09/2026 | 18/09/2026 |
 
 ### Kết quả đạt được tuần 10:
-
-- Hoàn thành tập dữ liệu 50 lớp món ăn và pipeline tiền xử lý dùng thống nhất khi huấn luyện, kiểm thử.
-- Fine-tune thành công EfficientNet-B0 và đánh giá mô hình trên tập test độc lập.
-- Xuất mô hình ONNX dung lượng 15.5 MB, đạt Test Top-1 Accuracy 85.62% và Weighted F1-Score 0.86.
-- Hoàn thiện tệp ánh xạ dinh dưỡng calorie_map.json và xác nhận kết quả suy luận cục bộ sẵn sàng tích hợp.
+- Xác nhận toàn bộ hệ thống hoạt động ổn định, chính xác qua các kịch bản kiểm thử chức năng và trường hợp biên.
+- Tối ưu thời gian phản hồi suy luận (warm start ~200-300ms) và quản lý tài nguyên hiệu quả trên AWS.
+- Xây dựng hoàn chỉnh hệ thống giám sát thời gian thực với CloudWatch Dashboard và cơ chế cảnh báo sự cố qua SNS.
+- Hoàn thiện bộ tài liệu workshop chi tiết, hướng dẫn triển khai, vận hành và dọn dẹp tài nguyên trên AWS.
+- Nghiệm thu và bàn giao thành công dự án NutriVision, hoàn thành chương trình thực tập FCAJ 2026.

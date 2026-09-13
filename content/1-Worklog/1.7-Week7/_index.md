@@ -21,8 +21,6 @@ pre: " <b> 1.7. </b> "
 | 6 | - Review and consolidate knowledge covered during the week | 28/08/2026 | 28/08/2026 | |
 
 ### Week 7 Achievements:
-* Mastered fundamentals of ELB and Auto Scaling on AWS.
+* Learned fundamentals of ELB and Auto Scaling on AWS.
 * Successfully deployed ALB to distribute traffic across EC2 instances.
 * Successfully configured Auto Scaling Group to dynamically scale based on load.
-
-

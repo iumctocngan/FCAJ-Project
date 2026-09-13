@@ -20,16 +20,7 @@ pre: " <b> 1.2. </b> "
 | 6 | - Tìm hiểu về Amazon VPC <br> - Tạo VPC, Subnet, Internet Gateway <br> - Tạo Route Table điều hướng Outbound Internet qua Internet Gateway <br> - Tạo Security Groups | 24/07/2026 | 26/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 2:
-- Hiểu rõ kiến trúc tổng quan các dịch vụ của AWS, đăng ký tài khoản và nhận 200$ credit.
-- Cấu hình thành công AWS Budgets để quản lý và kiểm soát chi phí sử dụng dịch vụ.
-- Nắm vững kiến thức IAM, tạo thành công IAM Group và IAM User phân quyền an toàn.
-- Thiết lập thành công hạ tầng mạng VPC với Subnet, Internet Gateway, Route Table và Security Groups.
-
-
-
-
-
-
-
-
-
+- Hiểu tổng quan về các nhóm dịch vụ AWS, đăng ký tài khoản và nhận 200$ credit.
+- Cấu hình AWS Budgets để theo dõi và kiểm soát chi phí sử dụng dịch vụ.
+- Hiểu cách phân quyền với IAM, tạo IAM Group và IAM User để quản lý truy cập.
+- Thiết lập hạ tầng mạng VPC cơ bản với Subnet, Internet Gateway, Route Table và Security Group.

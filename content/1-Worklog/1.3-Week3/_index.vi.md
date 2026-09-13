@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 ---
 
 ### Mục tiêu tuần 3:
-- Tìm hiểu và làm chủ dịch vụ máy chủ ảo Amazon EC2 và quản lý lưu trữ khối Amazon EBS.
+- Tìm hiểu dịch vụ máy chủ ảo Amazon EC2 và quản lý lưu trữ khối Amazon EBS.
 - Cấu hình Elastic IP, tạo Custom AMI và triển khai ứng dụng quản lý người dùng trên Linux.
 - Ôn tập, tổng hợp và củng cố toàn bộ kiến thức đã học trong tuần.
 
@@ -23,8 +23,6 @@ pre: " <b> 1.3. </b> "
 
 ### Kết quả đạt được tuần 3:
 - Khởi tạo, cấu hình và kết nối an toàn tới máy chủ ảo Amazon EC2.
-- Quản lý thành thạo ổ đĩa lưu trữ EBS Volume và tạo bản sao lưu dữ liệu EBS Snapshot.
+- Nắm được cách tạo, gắn ổ đĩa EBS Volume và sao lưu dữ liệu bằng EBS Snapshot.
 - Cấu hình thành công Elastic IP, đóng gói Custom AMI và triển khai ứng dụng trên Amazon Linux 2023.
 - Củng cố và hệ thống hóa toàn bộ kiến thức về EC2, EBS, AMI và môi trường Linux.
-
-

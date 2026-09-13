@@ -35,10 +35,10 @@ REPORT RequestId: fe178352-12fe-4fdd-b73f-10ab4dfab1fb	Duration: 1359.21 ms	Bill
 ```
 
 Key telemetry parameters captured:
-- **Duration**: Actual AI model execution latency in milliseconds.
-- **Billed Duration**: Billed Lambda execution time.
-- **Memory Size & Max Memory Used**: Allocated RAM (512 MB) and peak memory consumed.
-- **Application Logs**: ONNX inference output status, Amazon Rekognition Fallback triggers, and Out-of-Distribution (OOD) image persistence logs.
+- Duration: Actual AI model execution latency in milliseconds.
+- Billed Duration: Billed Lambda execution time.
+- Memory Size & Max Memory Used: Allocated RAM (512 MB) and peak memory consumed.
+- Application Logs: ONNX inference output status, Amazon Rekognition Fallback triggers, and Out-of-Distribution (OOD) image persistence logs.
 
 ---
 
@@ -103,8 +103,8 @@ After the alarm is created, Amazon CloudWatch continuously tracks the health and
 
 ![CloudWatch Alarm OK Status Dashboard](/FCAJ-Project/images/5-Workshop/5.5-Monitoring-Alerts/cloudwatch_alarm_ok_status.png)
 
-- **Normal state (OK)**: The alarm stays green in the OK state while the function processes requests successfully without runtime exceptions (Errors < 1).
-- **Incident state (In alarm)**: If execution failures reach or exceed the threshold (Errors >= 1), CloudWatch automatically transitions the state to In alarm (red) and sends an instant email notification via Amazon SNS.
+- Normal state (OK): The alarm stays green in the OK state while the function processes requests successfully without runtime exceptions (Errors < 1).
+- Incident state (In alarm): If execution failures reach or exceed the threshold (Errors >= 1), CloudWatch automatically transitions the state to In alarm (red) and sends an instant email notification via Amazon SNS.
 
 The alarm detail page displays comprehensive operational telemetry:
 - Current alarm state (OK / In alarm).

@@ -20,7 +20,6 @@ pre: " <b> 1.6. </b> "
 | 6 | - Review and consolidate CloudWatch knowledge covered during the week | 21/08/2026 | 21/08/2026 | |
 
 ### Week 6 Achievements:
-- Mastered monitoring concepts and operational metrics in Amazon CloudWatch.
+- Understood monitoring concepts and operational metrics in Amazon CloudWatch.
 - Successfully built real-time performance Dashboards and managed logs with CloudWatch Logs.
 - Successfully configured Alarms with SNS for automated real-time incident email alerts.
-

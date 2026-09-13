@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 ---
 
 ### Week 3 Objectives:
-- Learn and master Amazon EC2 virtual servers and Amazon EBS block storage management.
+- Learn Amazon EC2 virtual servers and Amazon EBS block storage management.
 - Configure Elastic IP, create custom AMIs, and deploy user management applications on Linux.
 - Review, summarize, and consolidate all knowledge learned throughout the week.
 
@@ -22,9 +22,7 @@ pre: " <b> 1.3. </b> "
 | 7 | - Review and consolidate all practical knowledge covered during the week | 02/08/2026 | 02/08/2026 | |
 
 ### Week 3 Achievements:
-- Mastered launching, configuring, and securely connecting to Amazon EC2 virtual servers.
-- Gained proficiency in managing EBS Volumes and creating data backups using EBS Snapshots.
+- Launched, configured, and securely connected to Amazon EC2 virtual servers.
+- Practiced managing EBS Volumes and creating data backups using EBS Snapshots.
 - Successfully associated Elastic IPs, packaged custom AMIs, and deployed applications on Amazon Linux 2023.
 - Systematized and consolidated all practical knowledge regarding EC2, EBS, and Linux environments.
-
-

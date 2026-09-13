@@ -21,7 +21,7 @@ pre: " <b> 1.5. </b> "
 | 6 | - Review and consolidate all practical knowledge covered during the week | 14/08/2026 | 14/08/2026 | |
 
 ### Week 5 Achievements:
-- Mastered core concepts of Serverless computing, benefits, and practical applications.
+- Understood core concepts of Serverless computing, benefits, and practical applications.
 - Understood API routing and integration between Amazon API Gateway and AWS Lambda backends.
 - Researched and prepared Docker container packaging workflows for Machine Learning models.
 - Systematized and consolidated all practical knowledge learned during the week.

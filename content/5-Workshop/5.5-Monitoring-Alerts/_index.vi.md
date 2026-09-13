@@ -35,10 +35,10 @@ REPORT RequestId: fe178352-12fe-4fdd-b73f-10ab4dfab1fb	Duration: 1359.21 ms	Bill
 ```
 
 Các thông số telemetry chính được ghi nhận:
-- **Duration**: Thời gian thực thi suy luận AI thực tế (mili-giây).
-- **Billed Duration**: Thời gian bị tính cước của Lambda.
-- **Memory Size & Max Memory Used**: Dung lượng RAM được cấp phát (512 MB) và dung lượng RAM thực tế tiêu thụ.
-- **Application Logs**: Nhật ký suy luận mô hình ONNX, thông tin kích hoạt Fallback của Amazon Rekognition và lưu vết ảnh Out-of-Distribution (OOD).
+- Duration: Thời gian thực thi suy luận AI thực tế (mili-giây).
+- Billed Duration: Thời gian bị tính cước của Lambda.
+- Memory Size & Max Memory Used: Dung lượng RAM được cấp phát (512 MB) và dung lượng RAM thực tế tiêu thụ.
+- Application Logs: Nhật ký suy luận mô hình ONNX, thông tin kích hoạt Fallback của Amazon Rekognition và lưu vết ảnh Out-of-Distribution (OOD).
 
 ---
 
@@ -103,8 +103,8 @@ Sau khi cảnh báo được khởi tạo, Amazon CloudWatch sẽ liên tục th
 
 ![Trạng thái CloudWatch Alarm OK](/FCAJ-Project/images/5-Workshop/5.5-Monitoring-Alerts/cloudwatch_alarm_ok_status.png)
 
-- **Trạng thái bình thường (OK)**: Cảnh báo duy trì ở trạng thái OK màu xanh khi hàm xử lý thành công và không phát sinh ngoại lệ chưa xử lý (Errors < 1).
-- **Trạng thái cảnh báo (In alarm)**: Nếu phát sinh lỗi thực thi (Errors >= 1), CloudWatch tự động chuyển sang trạng thái In alarm màu đỏ và gửi Email cảnh báo thời gian thực.
+- Trạng thái bình thường (OK): Cảnh báo duy trì ở trạng thái OK màu xanh khi hàm xử lý thành công và không phát sinh ngoại lệ chưa xử lý (Errors < 1).
+- Trạng thái cảnh báo (In alarm): Nếu phát sinh lỗi thực thi (Errors >= 1), CloudWatch tự động chuyển sang trạng thái In alarm màu đỏ và gửi Email cảnh báo thời gian thực.
 
 Trang chi tiết của Alarm trên Console cũng cung cấp đầy đủ các thông tin vận hành:
 - Trạng thái hiện tại của Alarm (OK / In alarm).

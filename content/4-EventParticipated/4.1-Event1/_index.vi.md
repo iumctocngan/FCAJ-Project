@@ -6,105 +6,103 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Bài thu hoạch “AWS Vietnam Community Meetup”
+# Bài thu hoạch: AWS Vietnam Community Meetup
 
-### Thông Tin Tổng Quan Về Sự Kiện
+### Thông tin tổng quan về sự kiện
 
-1. **Tên sự kiện:** AWS Vietnam Community Meetup
-2. **Thời gian:** Thứ Bảy, 25/07 | 08:30 – 12:00
-3. **Địa điểm:** Tòa nhà Grand Terra - Office Saigon, Ô Chợ Dừa, Hà Nội
-4. **Đối tượng tham gia:** Cloud Engineers, Software Engineers, AI/ML Practitioners, Sinh viên và cộng đồng yêu công nghệ AWS tại Việt Nam.
-
----
-
-### Mục Đích Của Sự Kiện
-
-1. Kết nối cộng đồng công nghệ Cloud & AI tại Việt Nam, chia sẻ hành trình và định hướng hoạt động của AWS User Group.
-2. Cập nhật những bước phát triển mới nhất về **Open-Source AI Agents** và khả năng ứng dụng thực tế.
-3. Định hướng chuyển đổi từ **xu hướng AI (AI Trends)** sang **giá trị kinh doanh thực tiễn (Business Value)** và đo lường ROI.
-4. Tối ưu hóa chu kỳ phát triển và phát hành phần mềm với phương châm **“Ship Fast with AI”**.
-5. Hướng dẫn chi tiết cách lựa chọn và triển khai **AI Agent Patterns** phù hợp trên nền tảng đám mây **AWS**.
+- Tên sự kiện: AWS Vietnam Community Meetup
+- Thời gian: Thứ Bảy, ngày 25/07/2026 (08:30 – 12:00)
+- Địa điểm: Tòa nhà Grand Terra, Ô Chợ Dừa, Đống Đa, Hà Nội
+- Thành phần tham gia: Kỹ sư Cloud, Software, AI/ML, sinh viên và cộng đồng công nghệ AWS tại Việt Nam
 
 ---
 
-### Danh Sách Diễn Giả & Chủ Đề
+### Mục đích của sự kiện
+
+- Kết nối cộng đồng công nghệ Cloud và AI tại Việt Nam, chia sẻ định hướng hoạt động của AWS User Group.
+- Cập nhật các bước phát triển mới về AI Agent mã nguồn mở và khả năng ứng dụng thực tế.
+- Trao đổi cách chuyển đổi từ trào lưu AI sang giải quyết bài toán thực tế của doanh nghiệp.
+- Tối ưu hóa chu kỳ phát triển phần mềm khi tích hợp các công cụ hỗ trợ AI.
+- Giới thiệu cách lựa chọn và triển khai các kiến trúc AI Agent trên nền tảng AWS.
+
+---
+
+### Danh sách diễn giả và chủ đề
 
 | Diễn giả | Vị trí / Đơn vị | Chủ đề trình bày |
 | :--- | :--- | :--- |
-| **Anh Ho & Phong Pham** | AWS Community Leaders | *Community Introduction & Giới thiệu hoạt động cộng đồng* |
-| **Tuan Vu** | AI/Cloud Specialist | *OpenClaw – The Rise and Practice of Open-Source AI Agents* |
-| **Nguyen Thu & Nam La** | Tech & Business Consultants | *From AI Trends to Business Value* |
-| **Henry (Duc) Bui** | Engineering Leader / Tech Expert | *Ship Fast with AI, Not by* |
-| **Dzung Luong** | Cloud Solutions Architect | *Selecting the Right AI Agent Pattern on AWS* |
+| Anh Ho & Phong Pham | AWS Community Leaders | Community Introduction & Giới thiệu hoạt động cộng đồng |
+| Tuan Vu | AI/Cloud Specialist | OpenClaw – The Rise and Practice of Open-Source AI Agents |
+| Nguyen Thu & Nam La | Tech & Business Consultants | From AI Trends to Business Value |
+| Henry (Duc) Bui | Engineering Leader / Tech Expert | Ship Fast with AI, Not by |
+| Dzung Luong | Cloud Solutions Architect | Selecting the Right AI Agent Pattern on AWS |
 
 ---
 
-### Nội Dung Nổi Bật Của Các Phiên Chia Sẻ
+### Nội dung các phiên chia sẻ
 
-#### 1. Hoạt động cộng đồng AWS tại Việt Nam (Speakers: Anh Ho & Phong Pham)
-1. Giới thiệu hành trình phát triển của cộng đồng AWS User Group Vietnam.
-2. Các chương trình hoạt động định kỳ: Tech Meetup, Workshop thực chiến, Bootcamp đào tạo và hỗ trợ thi chứng chỉ AWS (AWS Certifications).
-3. Định hướng xây dựng sân chơi cởi mở, nơi các kỹ sư cùng chia sẻ kiến thức, kinh nghiệm thực chiến và mở rộng mạng lưới nghề nghiệp.
+#### 1. Hoạt động cộng đồng AWS tại Việt Nam (Anh Ho & Phong Pham)
+- Giới thiệu về quá trình phát triển của cộng đồng AWS User Group Vietnam.
+- Các chương trình hoạt động định kỳ: Tech Meetup, Workshop thực chiến, Bootcamp đào tạo và các buổi chia sẻ hỗ trợ thi chứng chỉ AWS.
+- Định hướng xây dựng môi trường mở để các thành viên trao đổi kinh nghiệm thực tế và mở rộng kết nối nghề nghiệp.
 
-#### 2. OpenClaw – The Rise and Practice of Open-Source AI Agents (Speaker: Tuan Vu)
-1. **Sự trỗi dậy của AI Agents**: Chuyển dịch từ các mô hình LLM giao tiếp đơn thuần (Chatbot) sang các Autonomous Agents có khả năng tự lập kế hoạch, sử dụng công cụ (Tool calling) và thực thi tác vụ nhiều bước.
-2. **Thực tiễn với OpenClaw**: Khám phá kiến trúc framework nguồn mở giúp xây dựng và điều phối AI Agent linh hoạt; cơ chế quản lý bộ nhớ (Memory Management), vòng lặp suy luận (Reasoning loop - ReAct) và tương tác an toàn với API bên ngoài; cùng kinh nghiệm tối ưu hóa chi phí token và giảm thiểu hallucination khi triển khai thực tế.
+#### 2. OpenClaw – The Rise and Practice of Open-Source AI Agents (Tuan Vu)
+- Xu hướng chuyển dịch từ chatbot giao tiếp thông thường sang AI Agent tự lập kế hoạch, gọi công cụ (tool calling) và thực thi tác vụ nhiều bước.
+- Cấu trúc framework nguồn mở OpenClaw, cơ chế quản lý bộ nhớ, vòng lặp suy luận ReAct và tương tác với API bên ngoài.
+- Kinh nghiệm thực tế trong việc tối ưu chi phí token và hạn chế hiện tượng ảo giác (hallucination).
 
-#### 3. From AI Trends to Business Value (Speakers: Nguyen Thu & Nam La)
-1. **Vượt qua làn sóng cường điệu (AI Hype)**: Phân biệt rõ giữa việc "thử nghiệm tính năng AI" và "giải quyết bài toán kinh doanh cốt lõi".
-2. **Khung đánh giá ROI & Feasibility**: Tiêu chí lựa chọn Use Case dựa trên mức độ tác động đến doanh thu, khả năng tự động hóa quy trình và độ sẵn sàng của dữ liệu; đo lường giá trị thông qua giảm chi phí vận hành (Operational Cost), nâng cao năng suất nhân sự (Productivity Boost) và cải thiện trải nghiệm khách hàng (CX).
-3. **Quản trị và an toàn dữ liệu**: Vấn đề Data Governance, bảo mật thông tin nội bộ và tuân thủ các quy chuẩn bảo mật khi tích hợp GenAI vào doanh nghiệp.
+#### 3. From AI Trends to Business Value (Nguyen Thu & Nam La)
+- Phân biệt giữa việc thử nghiệm tính năng AI đơn thuần và giải quyết bài toán cốt lõi của doanh nghiệp.
+- Tiêu chí lựa chọn bài toán ứng dụng dựa trên tác động thực tế, mức độ sẵn sàng của dữ liệu và chi phí vận hành.
+- Lưu ý về an toàn dữ liệu, bảo mật thông tin nội bộ khi tích hợp GenAI vào hệ thống doanh nghiệp.
 
-#### 4. Ship Fast with AI, Not by (Speaker: Henry (Duc) Bui)
-1. **Tư duy "Ship Fast with AI"**: Sử dụng các công cụ AI (như Amazon Q Developer, Copilots, Coding Agents) như một đòn bẩy để đẩy nhanh toàn bộ chu kỳ phát triển phần mềm (SDLC) từ khâu thiết kế, viết mã, kiểm thử đến release.
-2. **Tránh sự phụ thuộc thụ động ("Not by")**: Nhấn mạnh tầm quan trọng của việc kỹ sư phải nắm vững nền tảng kiến trúc, hiểu rõ logic mã nguồn thay vì phó mặc hoàn toàn cho AI.
-3. **Best practices**: Áp dụng AI trong việc viết Unit Test tự động, refactor legacy code, dò quét lỗ hổng bảo mật và viết tài liệu kỹ thuật nhanh chóng.
+#### 4. Ship Fast with AI, Not by (Henry Bui)
+- Sử dụng các trợ lý AI (như Amazon Q Developer) để tăng tốc các khâu trong quy trình phát triển: viết boilerplate code, sinh unit test và viết tài liệu kỹ thuật.
+- Nhấn mạnh lập trình viên cần nắm vững kiến trúc và hiểu rõ logic mã nguồn thay vì phụ thuộc hoàn toàn vào gợi ý của AI.
 
-#### 5. Selecting the Right AI Agent Pattern on AWS (Speaker: Dzung Luong)
-1. **Các mẫu thiết kế AI Agent phổ biến**: Router Pattern (phân loại intent và điều phối request), ReAct (vòng lặp suy luận và hành động tương tác tools/APIs), Sequential Pattern (xử lý tác vụ tuần tự theo pipeline định trước), và Hierarchical Pattern (phân cấp quản lý gồm Supervisor Agent và các Worker Agents chuyên trách).
-2. **Hệ sinh thái dịch vụ AWS hỗ trợ AI Agents**: Amazon Bedrock (tận dụng Bedrock Agents và Knowledge Bases để tích hợp dữ liệu nội bộ RAG nhanh chóng), AWS Lambda & ECS/EKS (triển khai custom tools và microservices), AWS Step Functions (điều phối quy trình đa bước phức tạp, quản lý lỗi và retry tự động), cùng DynamoDB & OpenSearch (lưu trữ context, session memory và vector database).
-3. **Tiêu chí lựa chọn pattern**: Cân đối giữa yêu cầu về Latency, Complexity, Cost và Accuracy.
-
----
-
-### Những Gì Học Được (Key Takeaways)
-
-#### Tư Duy Công Nghệ & Kinh Doanh
-1. **Business-Driven AI**: Mọi giải pháp AI phải bắt nguồn từ nhu cầu thực tế của doanh nghiệp, có chỉ số đo lường hiệu quả rõ ràng thay vì chỉ chạy theo công nghệ mới.
-2. **Developer Multiplier**: AI không thay thế lập trình viên mà đóng vai trò là trợ thủ đắc lực giúp nâng cao hiệu suất làm việc gấp nhiều lần nếu biết sử dụng đúng cách.
-
-#### Kiến Trúc Kỹ Thuật
-1. Nắm vững các mô hình thiết kế **AI Agent Patterns** và cách ánh xạ (mapping) chúng vào các dịch vụ đám mây của **AWS**.
-2. Hiểu được tầm quan trọng của việc kết hợp **Bedrock Agents**, **Knowledge Bases (RAG)** và **Step Functions** để xây dựng các giải pháp tự động hóa thông minh, tin cậy và có khả năng mở rộng (scalability).
-3. Nắm được cách xây dựng Agent mã nguồn mở với cơ chế tool calling và quản lý memory hiệu quả.
+#### 5. Selecting the Right AI Agent Pattern on AWS (Dzung Luong)
+- Các mẫu thiết kế AI Agent phổ biến: Router Pattern (điều phối request), ReAct (suy luận và hành động), Sequential (xử lý tuần tự) và Hierarchical (phân cấp quản lý).
+- Các dịch vụ AWS tương ứng: Amazon Bedrock (Agents, Knowledge Bases), AWS Lambda, Step Functions và cơ sở dữ liệu như DynamoDB, OpenSearch.
+- Tiêu chí lựa chọn mô hình phù hợp dựa trên độ trễ, độ phức tạp và chi phí.
 
 ---
 
-### Ứng Dụng Vào Công Việc & Học Tập
+### Những gì học được
 
-1. **Áp dụng AI Coding Tools**: Tận dụng Amazon Q Developer và các trợ lý AI để tăng tốc độ viết code, tự động hóa kiểm thử và review mã nguồn trong các dự án cá nhân và nhóm.
-2. **Thử nghiệm xây dựng AI Agent**: Bắt đầu triển khai thử nghiệm các Agent đơn giản bằng Amazon Bedrock Agents hoặc Open-source framework để tự động hóa một số tác vụ lặp đi lặp lại.
-3. **Đóng góp cho cộng đồng**: Tích cực tham gia các buổi meetup kỹ thuật, giao lưu và học hỏi kinh nghiệm từ các chuyên gia trong AWS User Group Vietnam.
+#### Về tư duy công nghệ và ứng dụng
+- Giải pháp AI cần bắt nguồn từ nhu cầu thực tế và có mục tiêu đo lường rõ ràng.
+- AI là công cụ hỗ trợ lập trình viên nâng cao năng suất; bản thân người làm kỹ thuật vẫn phải kiểm soát kiến trúc và chất lượng mã nguồn.
+
+#### Về kiến trúc kỹ thuật
+- Hiểu được các mô hình thiết kế AI Agent và cách ánh xạ vào các dịch vụ AWS cụ thể.
+- Nhận biết vai trò của Bedrock Agents, Knowledge Bases và Step Functions trong việc xây dựng hệ thống tự động hóa tin cậy.
 
 ---
 
-### Trải Nghiệm Trong Sự Kiện
+### Ứng dụng vào công việc và học tập
 
-Tham gia **AWS Vietnam Community Meetup** là một trải nghiệm vô cùng bổ ích và truyền cảm hứng:
+- Tận dụng các trợ lý AI để hỗ trợ kiểm thử và hoàn thiện mã nguồn trong các bài lab và dự án cá nhân.
+- Thử nghiệm xây dựng các agent đơn giản để tự động hóa một số thao tác lặp lại.
+- Tích cực tham gia các buổi sinh hoạt chuyên môn của cộng đồng AWS User Group Vietnam.
 
-1. **Chất lượng nội dung chuyên sâu**: Các chủ đề được lựa chọn rất thức thời, bám sát các xu hướng nóng nhất hiện nay (AI Agents, GenAI Business Value, Developer Productivity) với chiều sâu kỹ thuật cao và nhiều case study thực tế.
-2. **Không khí giao lưu cởi mở**: Phần Tea Break và Networking tạo không gian tuyệt vời để trao đổi trực tiếp với các diễn giả, các Solution Architects và những người bạn cùng chung đam mê công nghệ Cloud & AI.
-3. **Hoạt động sôi nổi**: Phiên Kahoot Quiz và Lucky Draw ở cuối chương trình mang lại không khí vui tươi, hào hứng, giúp củng cố kiến thức một cách tự nhiên và thú vị.
+---
 
-#### Một số hình ảnh khi tham gia sự kiện
+### Trải nghiệm khi tham gia sự kiện
+
+Tham gia AWS Vietnam Community Meetup là một trải nghiệm rất bổ ích đối với em:
+- Nội dung các bài chia sẻ bám sát thực tế, có ví dụ cụ thể từ kinh nghiệm làm việc của diễn giả.
+- Phần Tea Break tạo điều kiện thuận lợi để trao đổi trực tiếp với các diễn giả và các anh chị kỹ sư đi trước.
+- Không khí buổi meetup vui vẻ, phần minigame trắc nghiệm Kahoot cuối giờ giúp củng cố lại các nội dung vừa nghe một cách nhẹ nhàng.
+
+#### Một số hình ảnh tại sự kiện
 
 ![Giới thiệu sự kiện và danh sách diễn giả - AI Revolution & Open Claw](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_presentation.jpg)
-*Hình 1: MC giới thiệu chương trình và các diễn giả chia sẻ tại sự kiện*
+*Hình 1: Giới thiệu chương trình và các diễn giả tại sự kiện*
 
 ![Toàn cảnh hội trường đông đảo người tham dự tại sự kiện](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_attendees.jpg)
-*Hình 2: Hội trường Grand Terra chật kín người tham dự và không khí học tập sôi nổi*
+*Hình 2: Hội trường Grand Terra trong buổi meetup*
 
 ![Ảnh chụp tập thể lưu niệm cùng các diễn giả và ban tổ chức sự kiện](/FCAJ-Project/images/4-EventParticipated/4.1-Event1/event1_group_photo.jpg)
-*Hình 3: Chụp ảnh kỷ niệm cùng các diễn giả, ban tổ chức và cộng đồng AWS Vietnam*
+*Hình 3: Chụp ảnh kỷ niệm cùng ban tổ chức và cộng đồng AWS Vietnam*
 
-> **Tổng kết:** Sự kiện đã mang lại cho tôi góc nhìn toàn diện từ bức tranh tổng thể về giá trị kinh doanh của AI đến chi tiết kỹ thuật triển khai AI Agent trên AWS, đồng thời tiếp thêm động lực mạnh mẽ để tiếp tục học hỏi và phát triển trên hành trình chinh phục Cloud & AI.
+Tổng kết lại, buổi meetup giúp em hiểu rõ hơn về các mô hình thiết kế AI Agent và cách áp dụng các dịch vụ AWS vào thực tế, đồng thời có thêm cơ hội học hỏi từ các anh chị đi trước trong cộng đồng.

@@ -14,7 +14,7 @@ Bài thực hành này hướng dẫn quy trình toàn diện (End-to-End) đưa
 
 Hệ thống NutriVision giúp tự động hóa việc tính toán hàm lượng calo và các chỉ số dinh dưỡng (Protein, Carbs, Fat, Fiber) từ hình ảnh bữa ăn với thời gian phản hồi nhanh chóng, tối ưu chi phí nhờ kiến trúc Serverless, kết hợp cơ chế dự phòng Amazon Rekognition và hệ thống giám sát cảnh báo thời gian thực Amazon CloudWatch & SNS.
 
-* **Mã nguồn toàn bộ dự án**: [iumctocngan/NutriVision](https://github.com/iumctocngan/NutriVision)
+- Mã nguồn dự án: [iumctocngan/NutriVision](https://github.com/iumctocngan/NutriVision)
 
 ---
 

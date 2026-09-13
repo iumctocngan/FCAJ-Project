@@ -21,7 +21,7 @@ pre: " <b> 1.5. </b> "
 | 6 | - Ôn tập và tổng hợp lại toàn bộ kiến thức, bài thực hành đã triển khai trong tuần | 14/08/2026 | 14/08/2026 | |
 
 ### Kết quả đạt được tuần 5:
-- Nắm vững nguyên lý hoạt động của kiến trúc Serverless, ưu điểm và ứng dụng thực tế.
+- Hiểu rõ nguyên lý hoạt động của kiến trúc Serverless, ưu điểm và ứng dụng thực tế.
 - Hiểu cách cấu hình và điều hướng API qua Amazon API Gateway đến hàm backend AWS Lambda.
 - Khảo sát và chuẩn bị môi trường đóng gói Docker Container cho mô hình Machine Learning.
 - Củng cố và hệ thống hóa toàn bộ kiến thức đã học trong tuần.

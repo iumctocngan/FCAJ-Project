@@ -11,5 +11,5 @@ pre: " <b> 5.3. </b> "
 In this step, you will standardize and fine-tune a deep learning computer vision model to recognize 50 popular food categories from the Food-101 dataset using Google Colab GPU. You will then compress the trained weights into a static ONNX format food_model.onnx (15.5 MB) optimized for AWS Lambda Serverless.
 
 #### Detailed Hands-on Labs:
-1. **[5.3.1 - Model Training on Colab](5.3.1-train-colab/)**
-2. **[5.3.2 - Export Static ONNX Model](5.3.2-export-onnx/)**
+1. [5.3.1 - Model Training on Colab](5.3.1-train-colab/)
+2. [5.3.2 - Export Static ONNX Model](5.3.2-export-onnx/)

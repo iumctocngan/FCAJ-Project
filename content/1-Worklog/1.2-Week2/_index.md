@@ -20,7 +20,7 @@ pre: " <b> 1.2. </b> "
 | 6 | - Learn about Amazon VPC <br> - Create VPC, Subnets, Internet Gateway <br> - Create Route Table for outbound internet routing via Internet Gateway <br> - Create Security Groups | 24/07/2026 | 26/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 2 Achievements:
-- Gained comprehensive understanding of AWS services, registered account, and claimed $200 credits.
-- Successfully configured AWS Budgets to control and manage operational costs.
-- Mastered IAM fundamentals, successfully created IAM Groups and IAM Users for secure access.
-- Successfully built a custom VPC infrastructure with Subnets, Internet Gateway, Route Table, and Security Groups.
+- Learned about AWS service categories, created an AWS account, and received $200 credits.
+- Configured AWS Budgets to track and control service usage costs.
+- Learned IAM access management and configured IAM Groups and Users.
+- Built a basic custom VPC with Subnets, Internet Gateway, Route Table, and Security Groups.

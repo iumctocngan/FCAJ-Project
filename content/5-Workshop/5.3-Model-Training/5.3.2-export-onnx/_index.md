@@ -9,8 +9,8 @@ pre: " <b> 5.3.2 </b> "
 #### Export ONNX Model
 
 #### 1. Why Export to ONNX Format?
-- **Size Optimization for Serverless**: The uncompressed PyTorch runtime (torch + torchvision) exceeds 1.2 GB, far beyond AWS Lambda container limits.
-- **Ultra-lightweight & High Speed**: The ONNX Runtime library requires only 18 MB. When packaged with the food_model.onnx file (15.52 MB), total Lambda package size is approximately ~34 MB, enabling rapid inference execution and optimized cold start latency.
+- Size optimization for Serverless: The uncompressed PyTorch runtime (torch + torchvision) exceeds 1.2 GB, far beyond practical AWS Lambda container sizes.
+- Compact footprint and high speed: The ONNX Runtime library requires only 18 MB. When packaged with the food_model.onnx file (15.52 MB), total Lambda package size is approximately ~34 MB, enabling rapid inference execution and optimized cold start latency.
 
 #### 2. Execute ONNX Export Code (Cell 8):
 

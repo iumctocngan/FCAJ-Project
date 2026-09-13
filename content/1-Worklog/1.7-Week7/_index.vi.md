@@ -21,8 +21,6 @@ pre: " <b> 1.7. </b> "
 | 6 | - Ôn tập và tổng hợp lại kiến thức trong tuần | 28/08/2026 | 28/08/2026 | |
 
 ### Kết quả đạt được tuần 7:
-* Nắm vững nguyên lý hoạt động của ELB và Auto Scaling trên AWS.
+* Nắm được nguyên lý hoạt động của ELB và Auto Scaling trên AWS.
 * Triển khai thành công ALB phân phối tải đều cho các EC2 Instance.
-* Cấu hình hoàn chỉnh Auto Scaling Group tự động co giãn theo tải thực tế.
-
-
+* Cấu hình được Auto Scaling Group tự động co giãn theo tải thực tế.

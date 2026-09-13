@@ -9,8 +9,8 @@ pre: " <b> 5.3. </b> "
 #### Xuất mô hình ONNX
 
 #### 1. Tại sao cần xuất mô hình sang định dạng ONNX?
-- **Tối ưu dung lượng cho Serverless**: Thư viện PyTorch (torch + torchvision) có kích thước giải nén vượt quá 1.2 GB, không thể đóng gói trực tiếp lên AWS Lambda.
-- **Siêu nhẹ & Tốc độ cao**: Thư viện ONNX Runtime chỉ chiếm 18 MB. Khi đóng gói cùng file mô hình food_model.onnx (15.52 MB), tổng dung lượng gói Lambda chỉ khoảng ~34 MB, giúp xử lý suy luận nhanh chóng và tối ưu thời gian khởi chạy.
+- Tối ưu dung lượng cho Serverless: Thư viện PyTorch (torch + torchvision) có kích thước giải nén vượt quá 1.2 GB, không thể đóng gói trực tiếp lên AWS Lambda.
+- Dung lượng nhỏ gọn và tốc độ cao: Thư viện ONNX Runtime chỉ chiếm 18 MB. Khi đóng gói cùng file mô hình food_model.onnx (15.52 MB), tổng dung lượng gói Lambda chỉ khoảng ~34 MB, giúp xử lý suy luận nhanh chóng và tối ưu thời gian khởi chạy.
 
 #### 2. Thực thi Mã nguồn Export ONNX (Cell 8):
 

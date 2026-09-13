@@ -20,7 +20,7 @@ pre: " <b> 1.4. </b> "
 | 6 | - Review and consolidate knowledge covered during the week | 07/08/2026 | 07/08/2026 | |
 
 ### Week 4 Achievements:
-* Mastered storage management in Amazon S3 and delivery optimization with CloudFront.
+* Learned storage management in Amazon S3 and delivery optimization with CloudFront.
 * Successfully configured S3 Versioning and CRR inter-region backup for data protection.
 * Understood RDS use cases and successfully provisioned an RDS Database Instance.
 

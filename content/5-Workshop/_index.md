@@ -14,7 +14,7 @@ This hands-on workshop guides you step-by-step through deploying an End-to-End C
 
 The NutriVision system automates calorie and macronutrient estimation (Protein, Carbs, Fat, Fiber) directly from meal photos with rapid response times, cost-optimized Serverless architecture, an Amazon Rekognition Fallback Engine, and real-time observability using Amazon CloudWatch & SNS.
 
-* **Project Source Code**: [iumctocngan/NutriVision](https://github.com/iumctocngan/NutriVision)
+- Project source code: [iumctocngan/NutriVision](https://github.com/iumctocngan/NutriVision)
 
 ---
 

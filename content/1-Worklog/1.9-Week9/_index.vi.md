@@ -8,23 +8,20 @@ pre: " <b> 1.9. </b> "
 
 
 ### Mục tiêu tuần 9:
-
-- Xác định bài toán, đối tượng người dùng và phạm vi MVP cho dự án NutriVision.
-- Lập kế hoạch triển khai end-to-end và thiết kế kiến trúc tổng thể cho hệ thống.
+- Xây dựng backend suy luận Serverless trên AWS Lambda bằng Docker Container Image.
+- Tích hợp lưu trữ S3, cơ chế AI Fallback qua Rekognition, cấu hình API Gateway và triển khai Web UI lên AWS Amplify.
 
 ### Các công việc cần triển khai trong tuần này:
-
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
 | --- | --- | --- | --- |
-| 2 | - Khảo sát vấn đề theo dõi dinh dưỡng và đề xuất ý tưởng nhận diện món ăn từ hình ảnh | 07/09/2026 | 07/09/2026 |
-| 3 | - Xác định người dùng mục tiêu, yêu cầu chức năng, tiêu chí thành công và phạm vi MVP | 08/09/2026 | 08/09/2026 |
-| 4 | - Nghiên cứu giải pháp, lựa chọn EfficientNet-B0, ONNX và các dịch vụ AWS Serverless phù hợp | 09/09/2026 | 09/09/2026 |
-| 5 | - Thiết kế kiến trúc tổng thể và luồng dữ liệu từ Web UI đến API, mô hình AI, lưu trữ và giám sát | 10/09/2026 | 10/09/2026 |
-| 6 | - Chia nhỏ công việc, lập tiến độ tuần 10–12, dự toán chi phí và rà soát rủi ro | 11/09/2026 | 11/09/2026 |
+| 2 | - Xây dựng Lambda inference bằng Python (ONNX Runtime), xử lý ảnh, kiểm tra chất lượng và tính dinh dưỡng theo khẩu phần | 07/09/2026 | 07/09/2026 |
+| 3 | - Đóng gói backend và mô hình ONNX thành Docker Container Image, đẩy lên Amazon ECR và cấu hình Lambda function | 08/09/2026 | 08/09/2026 |
+| 4 | - Thiết lập S3 Bucket lưu trữ hình ảnh; tích hợp Amazon Rekognition làm cơ chế AI fallback khi độ tin cậy < 60% | 09/09/2026 | 09/09/2026 |
+| 5 | - Cấu hình REST API trên Amazon API Gateway (POST /predict, CORS, Throttle/Rate Limiting) kết nối Lambda | 10/09/2026 | 10/09/2026 |
+| 6 | - Phát triển giao diện Web UI responsive, kết nối API và triển khai frontend lên AWS Amplify Hosting | 11/09/2026 | 11/09/2026 |
 
 ### Kết quả đạt được tuần 9:
-
-- Thống nhất ý tưởng NutriVision: nhận diện món ăn và ước tính dinh dưỡng từ ảnh chụp.
-- Xác định rõ phạm vi MVP, đầu vào/đầu ra, tiêu chí đánh giá và các trường hợp biên cần xử lý.
-- Hoàn thành sơ đồ kiến trúc AWS Serverless và kế hoạch triển khai end-to-end cho ba tuần tiếp theo.
-- Xây dựng backlog, mốc bàn giao, dự toán chi phí và phương án giảm thiểu rủi ro ban đầu.
+- Triển khai thành công backend suy luận ONNX trên AWS Lambda bằng Docker Container Image từ Amazon ECR.
+- Hoàn thiện API POST /predict với xác thực dữ liệu đầu vào, CORS và tính toán dinh dưỡng theo khẩu phần linh hoạt.
+- Tích hợp Amazon S3 và Amazon Rekognition làm cơ chế dự phòng thông minh cho các ảnh độ tin cậy thấp.
+- Hoàn thành giao diện Web UI hiện đại, đưa lên AWS Amplify Hosting và kết nối thành công luồng end-to-end từ người dùng đến backend.

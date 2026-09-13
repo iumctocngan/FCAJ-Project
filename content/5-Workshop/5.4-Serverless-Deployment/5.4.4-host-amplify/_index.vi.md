@@ -10,39 +10,38 @@ pre: " <b> 5.4.4 </b> "
 
 Sau khi tạo xong API Gateway REST API, bạn sẽ đưa giao diện trang web NutriVision lên môi trường Internet 24/7 với tên miền bảo mật HTTPS bằng dịch vụ AWS Amplify Hosting.
 
-#### 1. Chuẩn bị Mã nguồn Frontend:
+#### 1. Chuẩn bị mã nguồn Frontend:
 Đảm bảo thư mục giao diện Web chứa đủ các tệp tin:
 - index.html (Khung giao diện Web)
-- styles.css (Định dạng giao diện & hiệu ứng)
+- styles.css (Định dạng giao diện và hiệu ứng)
 - app.js (Mã xử lý gửi request POST tới API Gateway)
 
-Push toàn bộ mã nguồn lên repository GitHub của bạn (`https://github.com/iumctocngan/NutriVision`).
+Đẩy toàn bộ mã nguồn lên repository GitHub của bạn
 
-#### 2. Khởi tạo AWS Amplify App trên Console GUI:
+#### 2. Khởi tạo AWS Amplify App trên Console:
 1. Đăng nhập vào [AWS Amplify Console](https://ap-southeast-1.console.aws.amazon.com/amplify/home?region=ap-southeast-1).
-2. Nhấp chọn **Create new app** ➔ Chọn nguồn mã nguồn **GitHub** (hoặc Deploy without Git provider).
-3. Kết nối với Repository **iumctocngan/NutriVision** và chọn nhánh **main**.
+2. Chọn Create new app ➔ Chọn nguồn mã nguồn GitHub (hoặc Deploy without Git provider).
+3. Kết nối với repository iumctocngan/NutriVision và chọn nhánh main.
 
 ![Chọn Repository và nhánh trên AWS Amplify](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_select_repo_branch.png)
 
-4. Tại bước **App settings**:
-   - **App name**: Nhập `NutriVision`.
-   - **Frontend build command**: Để trống (ứng dụng Web tĩnh HTML/CSS/JS thuần).
-   - **Build output directory**: Nhập `/`.
+4. Tại bước App settings:
+   - App name: Nhập `NutriVision`.
+   - Frontend build command: Để trống (ứng dụng Web tĩnh HTML/CSS/JS thuần).
 
 ![AWS Amplify App Settings](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step1_app_settings.png)
 
-5. Chuyển sang bước **Review** ➔ Kiểm tra cấu hình và nhấp nút màu tím **Save and deploy**.
+5. Chuyển sang bước Review ➔ Kiểm tra cấu hình và chọn Save and deploy.
 
 ![AWS Amplify Review and Save and Deploy](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step2_save_deploy.png)
 
-#### 3. Truy cập đường dẫn Web Public HTTPS:
-1. Sau khi quá trình Build & Deploy hoàn tất (khoảng 30 giây), màn hình quản lý **NutriVision: Overview** hiển thị trạng thái phát hành thành công kèm nút **Visit deployed URL**.
+#### 3. Truy cập đường dẫn Web:
+1. Sau khi quá trình Build & Deploy hoàn tất (khoảng 30 giây), màn hình quản lý NutriVision: Overview hiển thị trạng thái hoàn thành kèm nút Visit deployed URL.
 
 ![AWS Amplify Overview - Visit deployed URL](/FCAJ-Project/images/5-Workshop/5.4-S3-onprem/amplify_step3_visit_deployed_url.png)
 
-2. Nhấp vào nút **Visit deployed URL** để mở ứng dụng Web:  
-👉 `https://main.dnrnzxbbonuba.amplifyapp.com`
+2. Nhấp vào nút Visit deployed URL để mở ứng dụng Web:  
+   `https://main.dnrnzxbbonuba.amplifyapp.com`
 
-- Mở đường dẫn trên bất kỳ trình duyệt thiết bị di động hoặc máy tính.
-- Giao diện Web đã sẵn sàng kết nối trực tiếp với API Gateway Endpoint cho bước kiểm thử toàn trình!
+- Mở đường dẫn trên trình duyệt thiết bị di động hoặc máy tính.
+- Giao diện Web đã sẵn sàng kết nối trực tiếp với API Gateway Endpoint cho bước kiểm thử.

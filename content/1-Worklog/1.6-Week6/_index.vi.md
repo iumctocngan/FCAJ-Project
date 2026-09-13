@@ -20,9 +20,6 @@ pre: " <b> 1.6. </b> "
 | 6 | - Ôn tập và tổng hợp lại kiến thức CloudWatch trong tuần | 21/08/2026 | 21/08/2026 | |
 
 ### Kết quả đạt được tuần 6:
-- Nắm vững kiến trúc giám sát và các chỉ số vận hành trên Amazon CloudWatch.
+- Hiểu rõ cơ chế giám sát và các chỉ số vận hành cơ bản trên Amazon CloudWatch.
 - Tạo thành công Dashboard theo dõi hiệu năng và quản lý log với CloudWatch Logs.
 - Thiết lập thành công Alarms kết hợp SNS để tự động nhận Email cảnh báo khi có sự cố.
-
-
-

@@ -20,7 +20,7 @@ pre: " <b> 1.4. </b> "
 | 6 | - Ôn tập và tổng hợp lại kiến thức trong tuần | 07/08/2026 | 07/08/2026 | |
 
 ### Kết quả đạt được tuần 4:
-* Nắm vững cách quản lý lưu trữ trên Amazon S3 và tối ưu phân phối với CloudFront.
+* Hiểu cách quản lý lưu trữ trên Amazon S3 và cấu hình phân phối qua CloudFront.
 * Cấu hình thành công Versioning và sao lưu liên vùng CRR để bảo vệ dữ liệu S3.
-* Hiểu rõ trường hợp sử dụng RDS và khởi tạo thành công RDS Database Instance.
+* Nắm được các trường hợp sử dụng RDS và khởi tạo thành công RDS Database Instance.
 
